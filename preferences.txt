@@ -1,0 +1,7 @@
+color: #002399
+
+Font
+html embed
+<link href="https://fonts.googleapis.com/css?family=Scheherazade" rel="stylesheet">
+css specification
+font-family: 'Scheherazade', serif;
