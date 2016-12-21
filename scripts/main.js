@@ -5,9 +5,9 @@ var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/latte.png') {
-      myImage.setAttribute ('src','images/latte2.jpg');
-    } else {
+    if(mySrc === 'images/latte2.jpg') {
       myImage.setAttribute ('src','images/latte.png');
+    } else {
+      myImage.setAttribute ('src','images/latte2.jpg');
     }
 }
