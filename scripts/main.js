@@ -1,6 +1,3 @@
-var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Raymond Xu';
-
 var myImage = document.querySelector('img');
 
 myImage.onclick = function() {

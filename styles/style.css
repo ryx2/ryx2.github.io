@@ -1,13 +1,20 @@
 html {
-  	font-size: 24px; 
+  font-size: 24px; 
 	font-family: 'Open Sans', sans-serif;
-	background-color: #000951;
-	color: white;
+  color: black;
+  height: 100%;
+  background: url('../images/cornell.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
 h1 {
   margin: 0;
-  padding: 20px 0;    
-  color: #ffffff;
+  padding: 0 0;    
+  color: #000000;
+  text-align: center;
+  width: 100%;
 }
 p, li {
 	font-size: 24px;
@@ -15,13 +22,27 @@ p, li {
 	letter-spacing: 1px;
 }
 body {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  padding: 0 0 0 0;
+  border: 0px solid black;
 }
 img {
   display: block;
   margin: 0 auto;
+}
+header {
+  width: 100%;
+}
+.bg { /*make background photos the whole page*/
+  width: 100%;
+  z-index: 0;
+}
+#header{
+    width:100%; 
+    background-color: #ffffff;
+    line-height: 2;
+}
+#headerContent{
+    margin: 0 auto; width: 100%;
 }
