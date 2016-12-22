@@ -9,6 +9,9 @@ html {
   -o-background-size: cover;
   background-size: cover; 
 }
+li {
+  display: inline;
+}
 h1 {
   margin: 0;
   padding: 0 0;    
@@ -41,8 +44,15 @@ header {
 #header{
     width:100%; 
     background-color: #ffffff;
-    line-height: 2;
+    line-height: 1.75;
 }
 #headerContent{
     margin: 0 auto; width: 100%;
+}
+#menu{
+  background-color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  color: black;       
 }
