@@ -38,7 +38,7 @@ li {
 }
 
 p {
-	line-height: 2;
+	line-height: 1;
 	letter-spacing: 1px;
 }
 #bar { /*centers the menu bar*/
@@ -47,9 +47,23 @@ p {
   padding: 5px 0 0px 0;
   margin: 0 0;
 }
+
 #bg { /*make background photos the whole page*/
   width: 100%;
   z-index: 0;
+}
+#bottompad {
+  padding-bottom: 25px;
+}
+#centered-scroll{
+  margin: 130px auto;
+  width: 60%;
+  height: 1000px;
+  background-color: white;
+  padding: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  display: block;
 }
 #header{
     width:100%; 
@@ -57,9 +71,22 @@ p {
     line-height: 1;
     margin: 0;
     padding: 10px 0 0 0;
+    height: 100px;
+    display: block;
+    position: fixed;
+    top: 0px;
 }
 #headerContent{
     margin: 0 auto; width: 100%;
+}
+#ibox{
+  position: inline-block;
+  float: left;
+  padding: 10px 0 0 0;
+}
+#leidos{
+  text-align: left;
+  margin: 0 0 0 25px;
 }
 #menu{
   background-color: #ffffff;
@@ -82,11 +109,25 @@ p {
   background-color: #000000;
   color: white;
 }
-#centered-scroll{
-  margin: 0 auto;
-  width: 60%;
-  background-color: white;
-  padding: 15px;
-  font-weight: 300;
-  font-size: 18px;
+#tbox {
+  text-align: center;
+  width: 250px;
+  height: 60px;
+  position: inline-block;
+  float: left;
+  padding: 25px 0px 0 0;
+  line-height: 1;
+}
+#tboxtop {
+  text-align: center;
+  width: 200px;
+  height: 90px;
+  position: inline-block;
+  float: left;
+  padding: 25px 200px 0 0;
+}
+.skinny{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: 1px;
 }
