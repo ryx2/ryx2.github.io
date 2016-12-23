@@ -57,7 +57,7 @@ p {
 }
 #centered-scroll{
   margin: 130px auto;
-  width: 60%;
+  width: 70%;
   height: 1000px;
   background-color: white;
   padding: 15px;
@@ -79,14 +79,16 @@ p {
 #headerContent{
     margin: 0 auto; width: 100%;
 }
-#ibox{
-  position: inline-block;
-  float: left;
-  padding: 10px 0 0 0;
-}
-#leidos{
+#leidostbox{
   text-align: left;
-  margin: 0 0 0 25px;
+  height: 70px;
+  display: inline-block;
+  padding: 20px 0 0 0;
+  white-space: nowrap;
+  float: right;
+}
+#lesswidth{
+  width: 150px;
 }
 #menu{
   background-color: #ffffff;
@@ -109,32 +111,41 @@ p {
   background-color: #000000;
   color: white;
 }
-#tbox {
-  text-align: center;
-  width: 100%;
-  height: 60px;
-  position: inline-block;
-  float: left;
-  padding: 25px 0px 0 0;
-  line-height: 1;
+#regwidth{
+  width: 250px;
 }
 #tboxtop {
-  text-align: center;
-  width: 200px;
-  height: 90px;
-  position: inline-block;
-  padding: 25px 200px 0 0;
+  text-align: left;
+  height: 70px;
+  display: inline-block;
+  padding: 0 0 0 0;
   white-space: nowrap;
+  float: right;
 }
 .container{
   width: 100%;
+  height: 70px;
+  padding: 0 0 0 0;
+  white-space: nowrap;
+  float: left;
 }
-.scaled50{
-  width: 70%;
-  max-width: 800px;
+.scaleddiv{
+  position: inline-block;
+  float: left;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.scaledim{
+  width: 100%;
+  position: inline-block;
+  padding: 0 0 0 0;
+  margin: auto;
 }
 .skinny{
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  height: 1px;
+  height: 20px;
+  line-height: 0.5;
+  text-align: left;
+  font-size: 15px;
 }
