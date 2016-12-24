@@ -80,6 +80,30 @@ p {
   min-width: 500px;
   box-shadow: 0px 0px 15px #000000;
 }
+#centered-scroll-courses{
+  margin: 130px auto;
+  width: 70%;
+  height: 100px;
+  background-color: white;
+  padding: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  display: block;
+  min-width: 500px;
+  box-shadow: 0px 0px 15px #000000;
+}
+#centered-scroll-projects{
+  margin: 130px auto;
+  width: 70%;
+  height: 400px;
+  background-color: white;
+  padding: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  display: block;
+  min-width: 500px;
+  box-shadow: 0px 0px 15px #000000;
+}
 #header{
     width:100%; 
     background-color: #ffffff;
