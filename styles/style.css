@@ -25,6 +25,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   background-position: 0 50px;
+  min-width: 750px;
 }
 img {
   display: block;
@@ -83,7 +84,6 @@ p {
 #centered-scroll-courses{
   margin: 130px auto;
   width: 70%;
-  height: 100px;
   background-color: white;
   padding: 15px;
   font-weight: 300;
@@ -95,7 +95,7 @@ p {
 #centered-scroll-projects{
   margin: 130px auto;
   width: 70%;
-  height: 400px;
+  height: 1200px;
   background-color: white;
   padding: 15px;
   font-weight: 300;
