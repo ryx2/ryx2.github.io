@@ -56,57 +56,20 @@ p {
 #bottompad {
   padding-bottom: 25px;
 }
-#centered-scroll{
-  margin: 130px auto;
-  width: 70%;
+#about{
   height: 1000px;
-  background-color: white;
-  padding: 15px;
-  font-weight: 300;
-  font-size: 18px;
-  display: block;
-  min-width: 500px;
-  max-width: 800px;
-  box-shadow: 0px 0px 15px #000000;
 }
-#centered-scroll-contact{
-  margin: 130px auto;
-  width: 70%;
+#contact{
   height: 150px;
-  background-color: white;
-  padding: 15px;
-  font-weight: 300;
-  font-size: 18px;
-  display: block;
-  min-width: 500px;
-  box-shadow: 0px 0px 15px #000000;
 }
-#centered-scroll-courses{
-  margin: 130px auto;
-  width: 70%;
+#courses{
   height: 700px;
-  background-color: white;
-  padding: 15px;
-  font-weight: 300;
-  font-size: 18px;
-  display: block;
-  min-width: 500px;
-  box-shadow: 0px 0px 15px #000000;
-}
-#centered-scroll-projects{
-  margin: 130px auto;
-  width: 70%;
-  height: 1400px;
-  background-color: white;
-  padding: 15px;
-  font-weight: 300;
-  font-size: 18px;
-  display: block;
-  min-width: 500px;
-  box-shadow: 0px 0px 15px #000000;
 }
 #container-pad{
   padding: 20px 0 0 0;
+}
+#float-left{
+  float: left;
 }
 #header{
     width:100%; 
@@ -118,9 +81,16 @@ p {
     display: block;
     position: fixed;
     top: 0px;
+    z-index: 10;
 }
 #headerContent{
-    margin: 0 auto; width: 100%;
+    margin: 0 auto; 
+    width: 100%;
+    z-index: 10;
+}
+#home{
+  height: 0px;
+  padding: 0 0 0 0;
 }
 #leidostbox{
   text-align: left;
@@ -133,13 +103,6 @@ p {
 #lesswidth{
   width: 150px;
 }
-#menu{
-  background-color: #ffffff;
-  text-align: center;
-  padding: 0px 20px 8px 20px;
-  text-decoration: none;
-  color: black;       
-}
 #menu-active{
   background-color: #000000;
   color: white;
@@ -147,12 +110,8 @@ p {
   padding: 0px 20px 8px 20px;
   text-decoration: none;     
 }
-#menu:hover{
-  background-color: #afafaf;
-}
-#menu:active{
-  background-color: #000000;
-  color: white;
+#projects{
+  height: 1400px;
 }
 #regwidth{
   width: 250px;
@@ -162,7 +121,6 @@ p {
   height: 70px;
   display: inline-block;
   padding: 0 0 0 0;
-  white-space: nowrap;
   float: right;
 }
 .contact-images{
@@ -174,8 +132,21 @@ p {
   width: 100%;
   height: 80px;
   padding: 0 0 0 0;
-  white-space: nowrap;
   float: left;
+}
+.menu{
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0px 20px 8px 20px;
+  text-decoration: none;
+  color: black;       
+}
+.menu:hover{
+  background-color: #afafaf;
+}
+.menu:focus, .active{
+  background-color: #000000;
+  color: white;
 }
 .project-images{
   float:left;
@@ -200,4 +171,19 @@ p {
   line-height: 0.5;
   text-align: left;
   font-size: 15px;
+}
+.tab{
+  margin: 130px auto;
+  width: 70%;
+  background-color: white;
+  padding: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  display: block;
+  min-width: 500px;
+  box-shadow: 0px 0px 15px #000000;
+  display: none;
+}
+.video-index{
+  z-index: -1;
 }

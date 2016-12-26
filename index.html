@@ -23,14 +23,175 @@
       <div id="headerContent">
           <h1>Raymond Xu</h1>
         <ul id="bar">
-          <li><a href="index.html" id="menu">Home</a></li>
-          <li><a href="about.html" id="menu">About</a></li>
-          <li><a href="projects.html" id="menu">Projects</a></li>
-          <li><a href="courses.html" id="menu">Courses</a></li>
-          <li><a href="contact.html" id="menu">Contact</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab(event, 'home')">Home</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab(event, 'about')">About</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab(event, 'projects')">Projects</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab(event, 'courses')">Courses</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab(event, 'contact')">Contact</a></li>
         </ul>
       </div>
     </div>
+    <!-- Home -->
+    <div class="tab" id="home"></div>
+    <!-- About -->
+    <div class="tab" id="about">
+      <p>I am a junior at Cornell University studying electrical and computer engineering.</p>
+      <div class="container"><h2 align="center">Education</h2></div>
+      <div class="container">
+        <div class="scaleddiv" id="regwidth">
+          <a href="https://www.ece.cornell.edu/" target="_blank">
+            <img src="images/cornell-ece.gif" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Bachelor of Science</p>
+            <p class="skinny">2014-2018</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <div class="container"><h2 align="center">Work</h2></div>
+      <!-- Lockheed -->
+      <div class="container">
+        <div class="scaleddiv" id="lesswidth">
+          <a href="http://www.lockheedmartin.com/us.html" target="_blank">
+            <img src="images/lockheed.jpg" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">System Engineering Intern</p>
+            <p class="skinny">May-Aug 2017</p>
+            <p class="skinny"><em>Owego, NY</em></p></b>
+        </div>
+      </div>
+      <!-- Leidos -->
+      <div class="container">
+        <div class="scaleddiv" id="lesswidth">
+          <a href="https://www.leidos.com/" target="_blank">
+            <img src="images/leidos.jpeg" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Electro-Optical Engineering Intern</p>
+            <p class="skinny">May-Aug 2016</p>
+            <p class="skinny"><em>Dayton, OH</em></p></b>
+        </div>
+      </div>
+      <div class="container"><h2 align="center">Research</h2></div>
+      <!-- Via -->
+      <div class="container">
+        <div class="scaleddiv" id="regwidth">
+          <a href="http://www.via.cornell.edu/" target="_blank">
+            <img src="images/via.PNG" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Researcher: Computer Vision</p>
+            <p class="skinny">Jan 2016 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <div class="container"><h2 align="center">Extracurricular Activities</h2></div>
+      <!-- Peer Advising -->
+      <div class="container">
+        <div class="scaleddiv" id="regwidth">
+          <a href="http://www.engineering.cornell.edu/academics/undergraduate/assistance/peer/" target="_blank">
+            <img src="images/cornell-eng.gif" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Peer Advisor</p>
+            <p class="skinny">Aug 2016 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <!-- WVBR -->
+      <div class="container">
+        <div class="scaleddiv" id="regwidth">
+          <a href="http://www.wvbr.com/" target="_blank">
+            <img src="images/wvbr.png" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Radio Talk show host</p>
+            <p class="skinny">Aug 2015 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <!-- Guitar -->
+      <div class="container">
+        <div class="scaleddiv" id="regwidth">
+          <a href="https://www.youtube.com/channel/UC95r3JQiUJk0cgiuPFu_gLA" target="_blank">
+            <img src="images/guitar.PNG" class="scaledim">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Classical Guitar Performer</p>
+            <p class="skinny"> 2010 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+    </div>
+    <!-- Projects -->
+    <div class="tab" id="projects">
+      <h2>Leidos</h2>
+      <h3> Occlusion Penetrating Imaging</h3>
+      <p>Source images.</p>
+      <video class="video-index" width="500" controls>
+        <source src="images/leidos-building-compressed.mp4">
+      </video>
+      <p>Overlayed images with the depth given in millimeters.</p>
+      <video class="video-index" width="500" controls>
+        <source src="images/leidos-range-sweep.mp4">
+      </video>
+      <h2>This Website</h2>
+      <div class="container">
+        <a href="https://github.com/ryx2/ryx2.github.io">
+          <img src="images/github.png" class="project-images">
+        </a>
+        <div id="tboxtop" id="float-left">
+          <p id="container-pad">I wrote the code for this website in html/css/js. It is available for viewing on <a href="https://github.com/ryx2/ryx2.github.io">github</a>.</p>
+          </div>
+        </div>
+    </div>
+    <!-- Courses -->
+    <div class="tab" id="courses">
+      <h2>Electrical and Computer Engineering</h2>
+      <p><b>ECE 2100</b> Introduction to Circuits for Electrical and Computer Engineers</p>
+      <p><b>ECE 2200</b> Signals and Information</p>
+      <p><b>ECE 2300</b> Digital Logic and Computer Organization</p>
+      <p><b>ECE 3100</b> Introduction to Probability and Inference for Random Signals and Systems*</p>
+      <p><b>ECE 3140</b> Embedded Systems*</p>
+      <p><b>ECE 3250</b> Mathematics of Signal and System Analysis</p>
+      <p><b>ECE 3400</b> Electrical and Computer Engineering Practice and Design</p>
+      <p><b>ECE 4300</b> Lasers and Optoelectronics</p>
+      <p><b>ECE 5470</b> Computer Vision</p>
+      <h2><b>Computer Science</b></h2>
+      <p><b>CS 2110</b> Introduction to Object Oriented Programming</p>
+      <p><b>CS 2800</b> Discrete Structures</p>
+      <div id="tboxtop">*in progress</div>
+    </div>
+    <!-- Contact -->
+    <div class="tab" id="contact">
+      <div class="container">
+        <div class="contact-images">
+          <a href="mailto:ryx2@cornell.edu" target="_top">
+            <img src="images/email.jpg" class="contact-images">
+          </a>
+        </div>
+        <p><a href="mailto:ryx2@cornell.edu" target="_top">ryx2@cornell.edu</a></p>
+      </div>
+      <div class="container">
+        <div class="contact-images">
+          <a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">
+            <img src="images/linkedin.png" class="contact-images">
+          </a>
+        </div>
+        <p><a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">Linkedin</a></p>
+      </div>
+      <!-- Timeline -->
+    </div>
+  </body>
+    <!-- Contact -->
   </body>
   <script src="scripts/main.js"></script>
 </html>
