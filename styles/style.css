@@ -3,6 +3,8 @@ body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   border: 0px solid black;
+  display: inline-block;
+  min-height: 100%;
 }
 h1 {
   margin: 0;
@@ -57,13 +59,7 @@ p {
   padding-bottom: 25px;
 }
 #about{
-  height: 1000px;
-}
-#contact{
-  height: 150px;
-}
-#courses{
-  height: 700px;
+  height: 1050px;
 }
 #container-pad{
   padding: 20px 0 0 0;
@@ -110,9 +106,6 @@ p {
   padding: 0px 20px 8px 20px;
   text-decoration: none;     
 }
-#projects{
-  height: 3600px;
-}
 #regwidth{
   width: 250px;
 }
@@ -133,6 +126,10 @@ p {
   height: 80px;
   padding: 0 0 0 0;
   float: left;
+}
+.container-stretch{
+  width: 100%;
+  display: inline-block;
 }
 .menu{
   background-color: #ffffff;
@@ -179,14 +176,11 @@ p {
   padding: 15px;
   font-weight: 300;
   font-size: 18px;
-  display: block;
   min-width: 500px;
   box-shadow: 0px 0px 15px #000000;
-  display: none;
 }
 .video-index{
   z-index: -1;
   min-width: 500px;
   width: 100%;
-  float: center;
 }
