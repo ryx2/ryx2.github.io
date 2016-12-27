@@ -111,7 +111,7 @@ p {
   text-decoration: none;     
 }
 #projects{
-  height: 1400px;
+  height: 3600px;
 }
 #regwidth{
   width: 250px;
@@ -186,4 +186,7 @@ p {
 }
 .video-index{
   z-index: -1;
+  min-width: 500px;
+  width: 100%;
+  float: center;
 }
