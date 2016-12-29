@@ -1,5 +1,4 @@
 function openTab(evt, tabName) {
-    // Declare all variables
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
@@ -19,3 +18,16 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 document.getElementById("default").click();
+
+function openCourse(evt, courseName){
+    var courses;
+    courses = document.getElementsByClassName("rolldown");
+    if (document.getElementById(courseName).style.display !== "block"){
+        for (i = 0; i < courses.length; i++) {
+            courses[i].style.display = "none";
+        }
+        document.getElementById(courseName).style.display = "block";
+    } else {
+        document.getElementById(courseName).style.display = "none";
+    }
+}
