@@ -37,7 +37,7 @@
     <div class="tab" id="home"></div>
     <!-- About -->
     <div class="tab" id="about">
-      <p>I am a junior at Cornell University studying electrical and computer engineering.</p>
+      <p>I am a junior at Cornell University studying electrical and computer engineering. Originally from Ithaca, NY.</p>
       <div class="container-stretch"><h2 align="center">Education</h2></div>
       <div class="container-stretch">
         <div class="scaleddiv" id="regwidth">
@@ -153,11 +153,13 @@
       <div class="container-stretch">
         <h2>Leidos</h2>
         <h3> Occlusion Penetrating Imaging</h3>
-        <p>Source images.</p>
+        <p>Taking multiple images of a scene, camera locations, and object
+          distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. Tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
+          <p>Source images, after calibration.</p>
         <video class="video-index" controls="true" type="video/mp4">
           <source src="images/leidos-building-compressed.mp4">
         </video>
-        <p>Overlayed images with the depth given in millimeters.</p>
+        <p>Overlayed images with the depth given at the top of the image in millimeters.</p>
       </div>
       <div class="container-stretch">
         <video class="video-index" controls="true" type="video/mp4">
@@ -166,6 +168,7 @@
       </div>
       <div class="container-stretch" controls="true">
         <h3>3D Point Cloud Generation</h3>
+        <p>Detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. Wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
         <p>Source images of a lego truck</p>
         <video class="video-index" controls="true" type="video/mp4">
           <source src="images/truck.mp4">
