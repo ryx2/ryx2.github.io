@@ -26,7 +26,7 @@ function openCourse(evt, courseName){
         for (i = 0; i < courses.length; i++) {
             courses[i].style.display = "none";
         }
-        $("#"+courseName).slideDown();
+        $("#"+courseName).slideDown("swing");
         document.getElementById(courseName).style.display = "block";
     } else {
         document.getElementById(courseName).style.display = "none";

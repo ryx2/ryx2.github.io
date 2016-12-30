@@ -148,7 +148,7 @@ p {
   height: 100px;
 }
 .rolldown{
-  padding-left: 20px;
+  padding: 0 0 10px 20px;
   display: none;
   font-family: 'Roboto Condensed', sans-serif;
 }
