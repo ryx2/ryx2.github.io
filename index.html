@@ -157,27 +157,27 @@
         <p>Taking multiple images of a scene, camera locations, and object
           distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. Tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
           <p>Source images, after calibration.</p>
-        <video class="video-index" controls="true" type="video/mp4">
+        <video class="video-index" preload="auto" controls="true" type="video/mp4">
           <source src="images/leidos-building-compressed.mp4">
         </video>
         <p>Overlayed images with the depth given at the top of the image in millimeters.</p>
       </div>
       <div class="container-stretch">
-        <video class="video-index" controls="true" type="video/mp4">
-          <source src="images/leidos-range-sweep2.mp4">
+        <video class="video-index" preload="auto" controls="true" type="video/mp4">
+          <source src="images/range-sweep3.mp4">
         </video>
       </div>
       <div class="container-stretch" controls="true">
         <h3>3D Point Cloud Generation</h3>
         <p>Detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. Wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
         <p>Source images of a lego truck</p>
-        <video class="video-index" controls="true" type="video/mp4">
+        <video class="video-index" preload="auto" controls="true" type="video/mp4">
           <source src="images/truck.mp4">
         </video>
       </div>
       <div class="container-stretch">
         <p>Corresponding generated 3D point Cloud</p>
-        <video class="video-index" controls="true" type="video/mp4">
+        <video class="video-index" preload="auto" controls="true" type="video/mp4">
           <source src="images/truck-cloud.mp4">
         </video>
       </div>
