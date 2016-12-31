@@ -49,6 +49,8 @@ p {
   text-align: center;
   padding: 5px 0 0px 0;
   margin: 0 0;
+  min-width: 500px;
+  white-space: nowrap;
 }
 #container-pad{
   padding: 20px 0 0 0;
@@ -77,6 +79,15 @@ p {
   height: 0px;
   padding: 0 0 0 0;
 }
+#hometab{
+  color: white;
+  height: 80px;
+  width: 100px;
+  padding-left: 0;
+}
+#hometab:hover{
+  opacity: 0;
+}
 #leidostbox{
   text-align: left;
   height: 70px;
@@ -87,13 +98,6 @@ p {
 }
 #lesswidth{
   width: 150px;
-}
-#menu-active{
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 0px 20px 8px 20px;
-  text-decoration: none;     
 }
 #regwidth{
   width: 250px;
