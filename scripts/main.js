@@ -28,7 +28,7 @@ function slideOpen(evt, sliding){
         for (i = 0; i < items.length; i++) {
             items[i].style.display = "none";
         }
-        $("#"+sliding).slideDown("linear");
+        $("#"+sliding).slideDown();
         document.getElementById(sliding).style.display = "block";
     } else {
         document.getElementById(sliding).style.display = "none";
