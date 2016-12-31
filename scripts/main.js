@@ -1,3 +1,4 @@
+jQuery.easing.def = "easeOutQuad";
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
@@ -18,17 +19,18 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 document.getElementById("default").click();
-
-function openCourse(evt, courseName){
-    var courses;
-    courses = document.getElementsByClassName("rolldown");
-    if (document.getElementById(courseName).style.display !== "block"){
-        for (i = 0; i < courses.length; i++) {
-            courses[i].style.display = "none";
+function slideOpen(evt, sliding){
+    var items, width;
+    items = document.getElementsByClassName("rolldown");
+    if (document.getElementById(sliding).style.display !== "block"){
+        width=$("#"+sliding).width;
+        document.getElementById(sliding).style.width = width;
+        for (i = 0; i < items.length; i++) {
+            items[i].style.display = "none";
         }
-        $("#"+courseName).slideDown("swing");
-        document.getElementById(courseName).style.display = "block";
+        $("#"+sliding).slideDown("linear");
+        document.getElementById(sliding).style.display = "block";
     } else {
-        document.getElementById(courseName).style.display = "none";
+        document.getElementById(sliding).style.display = "none";
     }
 }
