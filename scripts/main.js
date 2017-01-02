@@ -17,13 +17,13 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-    if (document.getElementById("hometab").style.marginLeft==="100px") {
+    if (document.getElementById("hometab").style.marginLeft==="150px") {
         document.getElementById("hometab").style.marginLeft = "0";
-        $("#hometab").animate({marginLeft: '100px'});
+        $("#hometab").animate({marginLeft: '150px'},1200,"easeOutBounce");
     };
     if (tabName==='home') {
         $(window).on("load", function() {
-            $("#hometab").delay(400).animate({marginLeft: '100px'});
+            $("#hometab").delay(400).animate({marginLeft: '150px'},1200,"easeOutBounce");
         });
     } 
 }

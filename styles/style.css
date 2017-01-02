@@ -85,9 +85,6 @@ p {
   width: 100px;
   padding-left: 0;
 }
-#hometab:hover{
-  opacity: 0;
-}
 #leidostbox{
   text-align: left;
   height: 70px;
