@@ -22,7 +22,7 @@ function openTab(evt, tabName) {
         if(loaded === "false"){
             $(window).on("load", function() {
                 loaded = "true";
-                $("#hometab").delay(400).animate({marginLeft: '200px'},1200,"easeOutBounce");
+                $("#hometab").delay(200).animate({marginLeft: '200px'},1200,"easeOutBounce");
             });
         } else {
             document.getElementById("hometab").style.marginLeft = "0";
