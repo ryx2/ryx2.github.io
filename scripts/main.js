@@ -22,7 +22,9 @@ function openTab(evt, tabName) {
     //     $("#hometab").animate({marginLeft: '100px'});
     // };
     if (tabName==='home') {
-        $("#hometab").animate({marginLeft: '100px'});
+        $(window).on("load", function() {
+            $("#hometab").delay(400).animate({marginLeft: '100px'});
+        });
     } 
 }
 // open home tab by default
