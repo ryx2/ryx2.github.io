@@ -1,7 +1,8 @@
 jQuery.easing.def = "easeOutQuad";
+var loaded = "false";
+document.getElementById("hometab").style.marginLeft = "0";
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
-
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tab");
     for (i = 0; i < tabcontent.length; i++) {
@@ -17,14 +18,16 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-    if (document.getElementById("hometab").style.marginLeft==="150px") {
-        document.getElementById("hometab").style.marginLeft = "0";
-        $("#hometab").animate({marginLeft: '150px'},1200,"easeOutBounce");
-    };
     if (tabName==='home') {
-        $(window).on("load", function() {
-            $("#hometab").delay(400).animate({marginLeft: '150px'},1200,"easeOutBounce");
-        });
+        if(loaded === "false"){
+            $(window).on("load", function() {
+                loaded = "true";
+                $("#hometab").delay(400).animate({marginLeft: '200px'},1200,"easeOutBounce");
+            });
+        } else {
+            document.getElementById("hometab").style.marginLeft = "0";
+            $("#hometab").stop().animate({marginLeft: '200px'},1200,"easeOutBounce");
+        }
     } 
 }
 // open home tab by default
