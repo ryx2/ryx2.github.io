@@ -55,8 +55,8 @@ p {
 #container-pad{
   padding: 20px 0 0 0;
 }
-#float-left{
-  float: left;
+#float-right{
+  float: right;
 }
 #header{
     width:100%; 
@@ -93,18 +93,12 @@ p {
   white-space: nowrap;
   float: right;
 }
-#lesswidth{
-  width: 150px;
-}
-#regwidth{
-  width: 250px;
-}
 #tboxtop {
   text-align: left;
   height: 70px;
   display: inline-block;
   padding: 5px 0 0 0;
-  float: right;
+  float: left;
 }
 .contact-images{
   float: left;
@@ -114,6 +108,7 @@ p {
 .container-stretch{
   width: 100%;
   display: inline-block;
+  text-align: center;
 }
 .menu{
   background-color: #ffffff;
@@ -141,11 +136,14 @@ p {
 .scaleddiv{
   position: inline-block;
   float: left;
-  padding: 0 0 0 0;
+  padding: 0 10% 0 0;
   margin: 0 0 0 0;
+  width: 45%;
 }
 .scaledim{
   width: 100%;
+  min-width: 150px;
+  max-width: 250px;
   position: inline-block;
   padding: 0 0 0 0;
   margin: auto;
@@ -172,7 +170,7 @@ p {
   padding: 15px;
   font-weight: 300;
   font-size: 18px;
-  min-width: 500px;
+  min-width: 650px;
   box-shadow: 0px 0px 15px #000000;
   border-radius: 5px;
 }
