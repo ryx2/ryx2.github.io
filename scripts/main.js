@@ -22,11 +22,18 @@ function openTab(evt, tabName) {
         if(loaded === "false"){
             $(window).on("load", function() {
                 loaded = "true";
-                $("#hometab").delay(200).animate({marginLeft: '200px'},1200,"easeOutBounce");
+                $("#hometab").delay(200).animate({
+                    marginLeft: '200px',
+                    fontSize: '40px'
+                },1200,"easeOutBounce");
             });
         } else {
             document.getElementById("hometab").style.marginLeft = "0";
-            $("#hometab").stop().animate({marginLeft: '200px'},1200,"easeOutBounce");
+            document.getElementById("hometab").style.fontSize = "24px";
+            $("#hometab").stop().animate({
+                marginLeft: '200px',
+                fontSize: '40px'
+            },1200,"easeOutBounce");
         }
     } 
 }
