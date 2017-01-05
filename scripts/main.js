@@ -24,15 +24,15 @@ function openTab(evt, tabName) {
                 loaded = "true";
                 $("#hometab").delay(200).animate({
                     marginLeft: '200px',
-                    fontSize: '40px'
+                    fontSize: '2.5em'
                 },1200,"easeOutBounce");
             });
         } else {
             document.getElementById("hometab").style.marginLeft = "0";
-            document.getElementById("hometab").style.fontSize = "24px";
+            document.getElementById("hometab").style.fontSize = "1.5em";
             $("#hometab").stop().animate({
                 marginLeft: '200px',
-                fontSize: '40px'
+                fontSize: '2.5em'
             },1200,"easeOutBounce");
         }
     } 
