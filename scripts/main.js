@@ -29,7 +29,7 @@ function openTab(evt, tabName) {
             });
         } else {
             document.getElementById("hometab").style.marginLeft = "0";
-            document.getElementById("hometab").style.fontSize = "1.5em";
+            document.getElementById("hometab").style.fontSize = "0.83em";
             $("#hometab").stop().animate({
                 marginLeft: '200px',
                 fontSize: '2.5em'
