@@ -93,6 +93,9 @@ p {
   white-space: nowrap;
   float: right;
 }
+#c-align{
+  text-align: center;
+}
 #tboxtop {
   text-align: left;
   height: 70px;
@@ -108,7 +111,7 @@ p {
 .container-stretch{
   width: 100%;
   display: inline-block;
-  text-align: center;
+  text-align: left;
 }
 .menu{
   background-color: #ffffff;
