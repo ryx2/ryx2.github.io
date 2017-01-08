@@ -103,6 +103,12 @@ p {
   padding: 5px 0 0 0;
   float: left;
 }
+.anchor{
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
 .contact-images{
   float: left;
   height: 60px;
@@ -176,6 +182,12 @@ p {
   min-width: 650px;
   box-shadow: 0px 0px 15px #000000;
   border-radius: 5px;
+}
+.top-anchor{
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
 }
 .video-index{
   z-index: -1;

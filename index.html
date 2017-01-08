@@ -38,9 +38,11 @@
     <!-- Home -->
     <div class="tab" id="home">
       <div id="hometab"><h2>Ithaca, NY</h2></div>
+      <a id="topper-home"></a>
     </div>
     <!-- About -->
     <div class="tab" id="about">
+      <a class="top-anchor" id="top-about"></a>
       <p>I am a junior at Cornell University studying electrical and computer engineering. Originally from Ithaca, NY.</p>
       <h5>Click images to get linked to explanatory webpages!</h5>
       <div class="container-stretch"><h2 align="center">Education</h2></div>
@@ -152,14 +154,24 @@
             <p class="skinny"><em>Ithaca, NY</em></p></b>
         </div>
       </div>
+      <a href="#top-about" id="topper-about">Back to top</a>
     </div>
     <!-- Projects -->
     <div class="tab" id="projects">
-      <a href="top"></a>
+      <a class="top-anchor" id="top-projects"></a>
+      <div class="container-stretch">
+        <h2>Skip to Section</h2>
+        <a href="#via"><div>Vision and Image Analysis Group</div></a>
+        <a href="#leidos"><div>Leidos Internship Project</div></a>
+        <a href="#website"><div>This Webpage</div></a>
+        <a href="#motion"><div>Motion Lab Project</div></a>
+      </div>
+      <a class="anchor" id="via"></a>
       <div class="container-stretch">
         <h2>Vision and Image Analysis Group: research with Professor Anthony Reeves in computer vision</h2>
         <p>Studying computer vision and algorithm optimization using the VisionX Computer Vision and Image Processing System with the end goal of recognizing tumors in CT scans of lungs and determining their coordinates.</p>
       </div>
+      <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
         <h2>Leidos</h2>
         <p>Helped Leidos develop their synthetic aperture and plenoptic processing capabilities.</p>
@@ -191,6 +203,7 @@
           <source src="images/truck-cloud.mp4">
         </video>
       </div>
+      <a class="anchor" id="website"></a>
       <div class="container-stretch">
       <h2>This Website</h2>
         <a href="https://github.com/ryx2/ryx2.github.io">
@@ -200,6 +213,7 @@
           <p id="container-pad">I wrote the code for this website in html/css/js. It is available for viewing on <a href="https://github.com/ryx2/ryx2.github.io">github</a>.</p>
         </div>
       </div>
+      <a class="anchor" id="motion"></a>
       <div class="container-stretch">
         <h2>Biorobotics and Locomotion Lab</h2>
         <p>Tracking motion on a force plate over time.</p>
@@ -207,10 +221,11 @@
       <div class="container-stretch">
         <img src="images/motion.png" class="video-index">
       </div>
-      <a href='#top'>Back to Top</a>
+      <a href='#top-projects' id="topper-projects">Back to Top</a>
     </div>
     <!-- Courses -->
     <div class="tab" id="courses">
+      <a class="top-anchor" id="top-courses"></a>
       <h5>(Click to see descriptions. All descriptions come from the <a href="https://classes.cornell.edu" target="_blank">classes.cornell.edu</a> webpage)</h5>
       <h2>Electrical and Computer Engineering</h2>
       <div class="container-stretch" id="slideselect">
@@ -267,11 +282,13 @@
         <p class="rolldown" id="2800">Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.</p>
       </div>
       <div class="container-stretch">
-        <div id="tboxtop">*in progress</div>
+        <div style="float:right">*in progress</div>
       </div>
+      <a href="#top-courses" id="topper-courses">Back to top</a>
     </div>
     <!-- Contact -->
     <div class="tab" id="contact">
+      <a class="top-anchor" id="top-contact"></a>
       <div class="container-stretch">
         <div class="contact-images">
           <a href="mailto:ryx2@cornell.edu" target="_top">
@@ -288,7 +305,7 @@
         </div>
         <p><a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">Linkedin</a></p>
       </div>
-      <!-- Timeline -->
+      <a href="#top-contact"></a>
     </div>
   </body>
     <!-- Contact -->

@@ -3,6 +3,7 @@ var loaded = "false";
 document.getElementById("hometab").style.marginLeft = "0";
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
+    window.scrollTo(0,0);
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tab");
     for (i = 0; i < tabcontent.length; i++) {
