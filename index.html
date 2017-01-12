@@ -173,7 +173,7 @@
         <h3>Identifying airways in lung CT scans and determining their orientation</h3>
       </div>
       <div class="container-stretch">
-        <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways.</p>
+        <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways. These images were taken from The Cancer Imaging Archive <sup><a href="#tcia-cite">[1]</a></sup></p>
         <img src="images/ct.png" style="width:600px" class="images">
       </div>
       <div class="container-stretch">
@@ -186,8 +186,13 @@
       </div>
       <img src="images/diagramalgorithm.png" style="width:600px" class="images">
       <div class="container-stretch">
-        <h3>Boundary comparison technique</h3>
         <h3>Canny edge detection in 3D</h3>
+        <p>This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise.</p>
+        <img src="images/noisysphere.png" style="width:600px" class="images">
+      </div>
+      <div class="container-stretch">
+        <p>This image is a slice of the sphere, zoomed in, and demonstrating non maximum suppression to obtain a 1 pixel thick edge. On the left, the original image section, zoomed in. In the center, the same region after the applied non-maximum suppression. On the right, the image of the difference between the original and the image after the program (red pixels are the same as the original, green pixels have been removed by the program).</p>
+        <img src="images/nms.png" style="width:600px" class="images">
       </div>
       <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
@@ -240,6 +245,12 @@
         <img src="images/motion.png" style="width:600px"class="images">
       </div>
       <a href='#top-projects' id="topper-projects">Back to Top</a>
+      <div class="container-stretch" id="tcia-cite">
+        <p><sup>[1]</sup>The Cancer Imaging Archive (TCIA) citation</p>
+        <p>Clark K, Vendt B, Smith K, Freymann J, Kirby J, Koppel P, Moore S, Phillips S, Maffitt D, Pringle M, Tarbox L, Prior F. <b>The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository</b>, Journal of Digital Imaging, Volume 26, Number 6, December, 2013, pp 1045-1057.</p>
+        <p><sup>[1]</sup>Data Citation</p>
+        <p>Grove, Olya, Berglund, Anders E., Schabath, Matthew B., Aerts, Hugo J.W.L., Dekker, Andre, Wang, Hua, … Gillies, Robert J. (2015). Data from: Quantitative computed tomographic descriptors associate tumor shape complexity and intratumor heterogeneity with prognosis in lung adenocarcinoma. The Cancer Imaging Archive. http://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX</p>
+      </div>
     </div>
     <!-- Courses -->
     <div class="tab" id="courses">
