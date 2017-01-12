@@ -119,6 +119,10 @@ p {
   display: inline-block;
   text-align: left;
 }
+.images{
+  margin: 0 0 0 0;
+  display: inline-block;
+}
 .menu{
   background-color: #ffffff;
   text-align: center;

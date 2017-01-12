@@ -170,6 +170,24 @@
       <div class="container-stretch">
         <h2>Vision and Image Analysis Group: research with Professor Anthony Reeves in computer vision</h2>
         <p>Studying computer vision and algorithm optimization using the VisionX Computer Vision and Image Processing System with the end goal of recognizing tumors in CT scans of lungs and determining their coordinates.</p>
+        <h3>Identifying airways in lung CT scans and determining their orientation</h3>
+      </div>
+      <div class="container-stretch">
+        <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways.</p>
+        <img src="images/ct.png" style="width:600px" class="images">
+      </div>
+      <div class="container-stretch">
+        <p>This is a slice of a airway, zoomed in. The filled in circle is a blood vessel, and the hollow circle is an airway.</p>
+        <img src="images/airway.png" style="width:150px" class="images">
+      </div>
+      <div class="container-stretch">
+        <p>This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets. An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program.</p>
+        <img src="images/sphere-cylinder.png" style="width:300px" class="images">
+      </div>
+      <img src="images/diagramalgorithm.png" style="width:600px" class="images">
+      <div class="container-stretch">
+        <h3>Boundary comparison technique</h3>
+        <h3>Canny edge detection in 3D</h3>
       </div>
       <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
@@ -219,7 +237,7 @@
         <p>Tracking motion on a force plate over time.</p>
       </div>
       <div class="container-stretch">
-        <img src="images/motion.png" class="video-index">
+        <img src="images/motion.png" style="width:600px"class="images">
       </div>
       <a href='#top-projects' id="topper-projects">Back to Top</a>
     </div>
