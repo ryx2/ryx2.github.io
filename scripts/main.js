@@ -23,20 +23,33 @@ function openTab(evt, tabName) {
         if(loaded === "false"){
             $(window).on("load", function() {
                 loaded = "true";
-                $("#hometab").delay(200).animate({
+                $("#hometab").delay(200).velocity({
                     marginLeft: '200px',
                     fontSize: '2.5em'
-                },1200,"easeOutBounce");
+                },1200,[400,20]); /*velocity's spring animation for a 1.2 seconds*/
             });
         } else {
+            $("#hometab").velocity("stop");
             document.getElementById("hometab").style.marginLeft = "0";
             document.getElementById("hometab").style.fontSize = "0.83em";
-            $("#hometab").stop().animate({
+            $("#hometab").velocity({
                 marginLeft: '200px',
                 fontSize: '2.5em'
-            },1200,"easeOutBounce");
+            },1200,[400,20]);
         }
-    } 
+    }
+    if (tabName==='about'||tabName==='courses') {
+        var popnum;
+        if (tabName==='about') {
+            popnum = "#pop1"
+        } else {
+            popnum = "#pop2"
+        };
+        $(popnum).velocity("finish");
+        $(popnum).velocity({
+            translateY: "-15px"
+        },500).velocity("reverse");
+    }; 
 }
 // open home tab by default
 document.getElementById("default").click();
