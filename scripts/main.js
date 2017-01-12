@@ -42,15 +42,13 @@ function openTab(evt, tabName) {
 document.getElementById("default").click();
 // slide open something
 function slideOpen(evt, sliding){
-    var items, width;
+    var items;
     items = document.getElementsByClassName("rolldown");
     if (document.getElementById(sliding).style.display !== "block"){
-        width=$("#"+sliding).width;
-        document.getElementById(sliding).style.width = width;
         for (i = 0; i < items.length; i++) {
             items[i].style.display = "none";
         }
-        $("#"+sliding).slideDown();
+        $("#"+sliding).velocity("slideDown",{duration: 400});
         document.getElementById(sliding).style.display = "block";
     } else {
         document.getElementById(sliding).style.display = "none";
