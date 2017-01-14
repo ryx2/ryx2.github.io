@@ -26,7 +26,7 @@ function openTab(evt, tabName) {
                 $("#hometab").delay(200).velocity({
                     marginLeft: '200px',
                     fontSize: '2.5em'
-                },1200,[400,20]); /*velocity's spring animation for a 1.2 seconds*/
+                },2000,[400,20]); /*velocity's spring animation for a 1.2 seconds*/
             });
         } else {
             $("#hometab").velocity("stop");
@@ -35,7 +35,7 @@ function openTab(evt, tabName) {
             $("#hometab").velocity({
                 marginLeft: '200px',
                 fontSize: '2.5em'
-            },1200,[400,20]);
+            },2000,[400,20]);
         }
     }
     if (tabName==='about'||tabName==='courses') {
