@@ -160,98 +160,109 @@
     <!-- Projects -->
     <div class="tab" id="projects">
       <a class="top-anchor" id="top-projects"></a>
-      <div class="container-stretch">
-        <h2>Table of contents</h2>
-        <a href="#via"><div>Vision and Image Analysis Group</div></a>
-        <a href="#leidos"><div>Leidos Internship Project</div></a>
-        <a href="#website"><div>This Website</div></a>
-        <a href="#motion"><div>Motion Lab Project</div></a>
-      </div>
+      <h5 id="pop3">Click projects to see descriptions and images.</h5>
       <a class="anchor" id="via"></a>
       <div class="container-stretch">
-        <h2>Vision and Image Analysis Group: research with Professor Anthony Reeves in computer vision</h2>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'via-project')"><div id="slideselect"><h2>Vision and Image Analysis Group: Research with Professor Anthony Reeves in Computer Vision</h2></div></a>
         <p>Studying computer vision and algorithm optimization using the VisionX Computer Vision and Image Processing System with the end goal of recognizing tumors in CT scans of lungs and determining their coordinates.</p>
-        <h3>Identifying airways in lung CT scans and determining their orientation</h3>
-      </div>
-      <div class="container-stretch">
-        <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways. These images were taken from The Cancer Imaging Archive <sup><a href="#tcia-cite" style="text-decoration:none">[1]</a></sup></p>
-        <img src="images/ct.png" style="width:600px" class="images">
-      </div>
-      <div class="container-stretch">
-        <p>This is a slice of a airway, zoomed in. The filled in circle is a blood vessel, and the hollow circle is an airway.</p>
-        <img src="images/airway.png" style="width:150px" class="images">
-      </div>
-      <div class="container-stretch">
-        <p>This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets. An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program.</p>
-        <img src="images/sphere-cylinder.png" style="width:300px" class="images">
-      </div>
-      <img src="images/diagramalgorithm.png" style="width:600px" class="images">
-      <div class="container-stretch">
-        <h3>Canny edge detection in 3D</h3>
-        <p>This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise.</p>
-        <img src="images/noisysphere.png" style="width:600px" class="images">
-      </div>
-      <div class="container-stretch">
-        <p>This image is a slice of the sphere, zoomed in, and demonstrating non maximum suppression to obtain a 1 pixel thick edge. On the left, the original image section, zoomed in. In the center, the same region after the applied non-maximum suppression. On the right, the image of the difference between the original and the image after the program (red pixels are the same as the original, green pixels have been removed by the program).</p>
-        <img src="images/nms.png" style="width:600px" class="images">
+          <div class="rolldown" id="via-project">
+            <h3>Identifying airways in lung CT scans and determining their orientation</h3>
+            <div class="container-stretch">
+              <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways. These images were taken from The Cancer Imaging Archive <sup><a href="#tcia-cite" style="text-decoration:none">[1]</a></sup></p>
+              <img src="images/ct.png" style="width:600px" class="images">
+            </div>
+            <div class="container-stretch">
+              <p>This is a slice of a airway, zoomed in. The filled in circle is a blood vessel, and the hollow circle is an airway.</p>
+              <img src="images/airway.png" style="width:150px" class="images">
+            </div>
+            <div class="container-stretch">
+              <p>This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets. An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program.</p>
+              <img src="images/sphere-cylinder.png" style="width:300px" class="images">
+            </div>
+            <img src="images/diagramalgorithm.png" style="width:600px" class="images">
+            <div class="container-stretch">
+              <h3>Canny edge detection in 3D</h3>
+              <p>This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise.</p>
+              <img src="images/noisysphere.png" style="width:600px" class="images">
+            </div>
+            <div class="container-stretch">
+              <p>This image is a slice of the sphere, zoomed in, and demonstrating non maximum suppression to obtain a 1 pixel thick edge. On the left, the original image section, zoomed in. In the center, the same region after the applied non-maximum suppression. On the right, the image of the difference between the original and the image after the program (red pixels are the same as the original, green pixels have been removed by the program).</p>
+              <img src="images/nms.png" style="width:600px" class="images">
+            </div>
+            <a class="anchor"  id="tcia-cite"></a>
+            <div class="container-stretch">
+              <p><sup>[1]</sup>The Cancer Imaging Archive (TCIA) citation</p>
+              <p>Clark K, Vendt B, Smith K, Freymann J, Kirby J, Koppel P, Moore S, Phillips S, Maffitt D, Pringle M, Tarbox L, Prior F. <b>The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository</b>, Journal of Digital Imaging, Volume 26, Number 6, December, 2013, pp 1045-1057.</p>
+              <p><sup>[1]</sup>Data Citation</p>
+              <p>Grove, Olya, Berglund, Anders E., Schabath, Matthew B., Aerts, Hugo J.W.L., Dekker, Andre, Wang, Hua, … Gillies, Robert J. (2015). Data from: Quantitative computed tomographic descriptors associate tumor shape complexity and intratumor heterogeneity with prognosis in lung adenocarcinoma. The Cancer Imaging Archive. <a href="http://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX">http://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX</a></p>
+            </div>
+            <div style="text-align:center">
+              <a href="javascript:void(0)" onclick="slideOpen(event, 'via-project')"><button class="close">Collapse</button></a>
+            </div>
+          </div>
       </div>
       <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
-        <h2>Leidos</h2>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'leidos-project')"><div id="slideselect"><h2>Leidos</h2></div></a>
         <p>Helped Leidos develop their synthetic aperture and plenoptic processing capabilities.</p>
-        <h3> Occlusion Penetrating Imaging</h3>
-        <p>Taking multiple images of a scene, camera locations, and object
-          distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. Tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
-          <p>Source images, after calibration.</p>
-        <video class="video-index" preload="auto" controls="true" type="video/mp4">
-          <source src="images/leidos-building-compressed.mp4">
-        </video>
-        <p>Overlayed images with the depth given at the top of the image in millimeters.</p>
-      </div>
-      <div class="container-stretch">
-        <video class="video-index" preload="auto" controls="true" type="video/mp4">
-          <source src="images/range-sweep3.mp4">
-        </video>
-      </div>
-      <div class="container-stretch" controls="true">
-        <h3>3D Point Cloud Generation</h3>
-        <p>Detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. Wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
-        <p>Source images of a lego truck</p>
-        <video class="video-index" preload="auto" controls="true" type="video/mp4">
-          <source src="images/truck.mp4">
-        </video>
-      </div>
-      <div class="container-stretch">
-        <p>Corresponding generated 3D point Cloud</p>
-        <video class="video-index" preload="auto" controls="true" type="video/mp4">
-          <source src="images/truck-cloud.mp4">
-        </video>
+        <div class="rolldown" id="leidos-project">
+          <h3> Occlusion Penetrating Imaging</h3>
+          <p>Taking multiple images of a scene, camera locations, and object
+            distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. Tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
+            <p>Source images, after calibration.</p>
+          <video class="video-index" preload="auto" controls="true" type="video/mp4">
+            <source src="images/leidos-building-compressed.mp4">
+          </video>
+          <p>Overlayed images with the depth given at the top of the image in millimeters.</p>
+          <div class="container-stretch"> 
+            <video class="video-index" preload="auto" controls="true" type="video/mp4">
+              <source src="images/range-sweep3.mp4">
+            </video>
+          </div>
+          <div class="container-stretch" controls="true">
+            <h3>3D Point Cloud Generation</h3>
+            <p>Detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. Wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
+            <p>Source images of a lego truck</p>
+            <video class="video-index" preload="auto" controls="true" type="video/mp4">
+              <source src="images/truck.mp4">
+            </video>
+          </div>
+          <div class="container-stretch">
+            <p>Corresponding generated 3D point Cloud</p>
+            <video class="video-index" preload="auto" controls="true" type="video/mp4">
+              <source src="images/truck-cloud.mp4">
+            </video>
+          </div>
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'leidos-project')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
       </div>
       <a class="anchor" id="website"></a>
       <div class="container-stretch">
-      <h2>This Website</h2>
-        <a href="https://github.com/ryx2/ryx2.github.io">
-          <img src="images/github.png" class="project-images">
-        </a>
-        <div id="float-left">
-          <p id="container-pad">I wrote the code for this website in html/css/js. It is available for viewing on <a href="https://github.com/ryx2/ryx2.github.io">github</a>.</p>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'website-project')"><div id="slideselect"><h2>This Website</h2></div></a>
+        <div class="rolldown" id="website-project">
+          <a href="https://github.com/ryx2/ryx2.github.io">
+            <img src="images/github.png" class="project-images">
+          </a>
+          <div id="float-left">
+            <p id="container-pad">I wrote the code for this website in html/css/js. It is available for viewing on <a href="https://github.com/ryx2/ryx2.github.io">github</a>.</p>
+          </div>
         </div>
       </div>
       <a class="anchor" id="motion"></a>
       <div class="container-stretch">
-        <h2>Biorobotics and Locomotion Lab</h2>
-        <p>Tracking motion on a force plate over time.</p>
-      </div>
-      <div class="container-stretch">
-        <img src="images/motion.png" style="width:600px"class="images">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'motion-project')"><div id="slideselect"><h2>Biorobotics and Locomotion Lab</h2></div></a>
+        <p>Researched human balance while standing, walking, running, and turning using pressure sensitive force plates.</p>
+        <div class="rolldown" id="motion-project">
+          <p>This program in MATLAB that read the data and created scatter plots to model where the feet were on the force plate over time.</p>
+          <img src="images/motion.png" style="width:600px"class="images">
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'motion-project')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
       </div>
       <a href='#top-projects' id="topper-projects">Back to Top</a>
-      <div class="container-stretch" id="tcia-cite">
-        <p><sup>[1]</sup>The Cancer Imaging Archive (TCIA) citation</p>
-        <p>Clark K, Vendt B, Smith K, Freymann J, Kirby J, Koppel P, Moore S, Phillips S, Maffitt D, Pringle M, Tarbox L, Prior F. <b>The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository</b>, Journal of Digital Imaging, Volume 26, Number 6, December, 2013, pp 1045-1057.</p>
-        <p><sup>[1]</sup>Data Citation</p>
-        <p>Grove, Olya, Berglund, Anders E., Schabath, Matthew B., Aerts, Hugo J.W.L., Dekker, Andre, Wang, Hua, … Gillies, Robert J. (2015). Data from: Quantitative computed tomographic descriptors associate tumor shape complexity and intratumor heterogeneity with prognosis in lung adenocarcinoma. The Cancer Imaging Archive. <a href="http://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX">http://doi.org/10.7937/K9/TCIA.2015.A6V7JIWX</a></p>
-      </div>
     </div>
     <!-- Courses -->
     <div class="tab" id="courses">
@@ -260,56 +271,56 @@
       <h5>All descriptions come from the <a href="https://classes.cornell.edu" target="_blank">classes.cornell.edu</a> webpage</h5>
       <h2>Electrical and Computer Engineering</h2>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2100')"><p><b>ECE 2100</b> Introduction to Circuits for Electrical and Computer Engineers</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2100')"><div style="height:100%"><p><b>ECE 2100</b> Introduction to Circuits for Electrical and Computer Engineers</p></div></a>
         <p class="rolldown" id="2100">First course in electrical circuits and electronics. Establishes the fundamental properties of circuits with application to modern electronics. Topics include circuit analysis methods, operational amplifiers, basic filter circuits, and elementary transistor principles. The laboratory experiments are coupled closely with the lectures.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2200')"><p><b>ECE 2200</b> Signals and Information</p></a>
-        <div class="rolldown" id="2200">Introduction to signal processing. Topics include frequency-based representations: Fourier analysis and synthesis; discrete time linear systems: input/output relationships, filtering, spectral response; analog-to-digital and digital-to-analog conversion; continuous time signals and linear time invariant systems: frequency response and continuous-time Fourier transform.</div>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2200')"><div style="height:100%"><p><b>ECE 2200</b> Signals and Information</p></div></a>
+        <p class="rolldown" id="2200">Introduction to signal processing. Topics include frequency-based representations: Fourier analysis and synthesis; discrete time linear systems: input/output relationships, filtering, spectral response; analog-to-digital and digital-to-analog conversion; continuous time signals and linear time invariant systems: frequency response and continuous-time Fourier transform.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2300')"><p><b>ECE 2300</b> Digital Logic and Computer Organization</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2300')"><div style="height:100%"><p><b>ECE 2300</b> Digital Logic and Computer Organization</p></div></a>
         <p class="rolldown" id="2300">This course provides an introduction to the design and implementation of digital circuits and microprocessors. Topics include transistor network design, Boolean algebra, combinational circuits, sequential circuits, finite state machine design, processor pipelines, and memory hierarchy. Design methodology using both discrete components and hardware description languages is covered in the laboratory portion of the course.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3100')"><p><b>ECE 3100</b> Introduction to Probability and Inference for Random Signals and Systems*</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3100')"><div style="height:100%"><p><b>ECE 3100</b> Introduction to Probability and Inference for Random Signals and Systems*</p></div></a>
         <p class="rolldown" id="3100">Introduction to probabilistic techniques for modeling random phenomena and making estimates, inferences, predictions, and engineering decisions in the presence of chance and uncertainty. Probability measures, classical probability and combinatorics, countable and uncountable sample spaces, random variables, probability mass functions, probability density functions, cumulative distribution functions, important discrete and continuous distributions, functions of random variables including moments, independence and correlation, conditional probability, Total Probability and Bayes' rule with application to random system response to random signals, characteristic functions and sums of random variables, the multivariate Normal distribution, maximum likelihood and maximum a posteriori estimation, Neyman-Pearson and Bayesian statistical hypothesis testing, Monte Carlo simulation. Applications in communications, networking, circuit design, device modeling, and computer engineering.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3140')"><p><b>ECE 3140</b> Embedded Systems*</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3140')"><div style="height:100%"><p><b>ECE 3140</b> Embedded Systems*</p></div></a>
         <p class="rolldown" id="3140">An introduction to the design of embedded systems, with an emphasis on understanding the interaction between hardware, software, and the physical world. Topics covered include assembly language programming, interrupts, I/O, concurrency management, scheduling, resource management, and real-time constraints.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3150')"><p><b>ECE 3150</b> Introduction to Microelectronics</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3150')"><div style="height:100%"><p><b>ECE 3150</b> Introduction to Microelectronics</p></div></a>
         <p class="rolldown" id="3150">This is a comprehensive undergraduate level course on microelectronics. Topics covered include basic semiconductor physics, electrons and holes in semiconductors, electrical transport in semiconductors, PN junctions and diodes, photodetectors and solar cells, Metal-Oxide-Semiconductor (MOS) capacitors, MOS field effect transistors (FETs), bipolar junction transistors (BJTs), large signal and small signal models of electronic devices, single stage amplifiers, multistage amplifiers, differential amplifiers, analog circuit analysis and design, high-frequency models of devices, high-frequency circuit analysis, digital logic and MOS logic devices, complimentary MOS (or CMOS) logic gates, fundamental trade-offs in high speed analog and digital circuit design. The coursework includes labs and a final project.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3250')"><p><b>ECE 3250</b> Mathematics of Signal and System Analysis</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3250')"><div style="height:100%"><p><b>ECE 3250</b> Mathematics of Signal and System Analysis</p></div></a>
         <p class="rolldown" id="3250">Course aims to deepen students' working knowledge of mathematical tools relevant to ECE applications. While the course emphasizes fundamentals, it also provides an ECE context for the topics it covers, which include foundational material about sets and functions; modular arithmetic and public-key cryptography; inner products, orthogonal representations, and Fourier analysis; LTI systems as mappings on function spaces; sampling and interpolation; singular-value decomposition; and, as time permits, an introduction to wavelets and elementary convex analysis.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3400')"><p><b>ECE 3400</b> Electrical and Computer Engineering Practice and Design</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3400')"><div style="height:100%"><p><b>ECE 3400</b> Electrical and Computer Engineering Practice and Design</p></div></a>
         <p class="rolldown" id="3400">A brief history of electrical and computer engineering, the core subjects that define the field today, the ethical standards of its practice, and instruction in the elements of the process of designing electrical devices and systems. Students engage in experiential-learning design projects in which they will use the design process strategies to function well on a team and to design a system that meets customer needs and electrical engineering constraints.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4300')"><p><b>ECE 4300</b> Lasers and Optoelectronics</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4300')"><div style="height:100%"><p><b>ECE 4300</b> Lasers and Optoelectronics</p></div></a>
         <p class="rolldown" id="4300">Introduction to the operation, physics, and application of lasers. The course covers diffraction-limited optics, Gaussian beams, optical resonators, the interaction of radiation with matter, stimulated emission, rate equations, and laser design. Examples of coherent radiation to nonlinear optics, communication, and leading-edge research are frequently used.  Course concludes with a lab where students design and then build a laser.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '5470')"><p><b>ECE 5470</b> Computer Vision</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '5470')"><div style="height:100%"><p><b>ECE 5470</b> Computer Vision</p></div></a>
         <p class="rolldown" id="5470">Covers computer acquisition and analysis of image data with emphasis on techniques for robot vision. Concentrates on descriptions of objects at three levels of abstraction: segmented images (images organized into subimages that are likely to correspond to interesting objects), geometric structures (quantitative models of image and world structures), and relational structures (complex symbolic descriptions of images and world structures). The programming of several computer-vision algorithms is required.</p>
       </div>
       <h2><b>Computer Science</b></h2>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '1112')"><p><b>CS 1112</b> Introduction to Computing Using MATLAB</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '1112')"><div style="height:100%"><p><b>CS 1112</b> Introduction to Computing Using MATLAB</p></div></a>
         <p class="rolldown" id="1112">Programming and problem solving using MATLAB. Emphasizes the systematic development of algorithms and programs. Topics include iteration, functions, arrays, recursion, object-oriented programming, and MATLAB graphics. Assignments are designed to build an appreciation for complexity, dimension, fuzzy data, inexact arithmetic, randomness, simulation, and the role of approximation.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2110')"><p><b>CS 2110</b> Introduction to Object Oriented Programming</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2110')"><div style="height:100%"><p><b>CS 2110</b> Introduction to Object Oriented Programming</p></div></a>
         <p class="rolldown" id="2110">Intermediate programming in a high-level language and introduction to computer science. Topics include program structure and organization, object-oriented programming (classes, objects, types, sub-typing), graphical user interfaces, algorithm analysis (asymptotic complexity, big "O" notation), recursion, data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms. Java is the principal programming language.</p>
       </div>
       <div class="container-stretch" id="slideselect">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2800')"><p><b>CS 2800</b> Discrete Structures</p></a>
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2800')"><div style="height:100%"><p><b>CS 2800</b> Discrete Structures</p></div></a>
         <p class="rolldown" id="2800">Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.</p>
       </div>
       <div class="container-stretch">

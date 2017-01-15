@@ -38,17 +38,19 @@ function openTab(evt, tabName) {
             },2000,[400,20]);
         }
     }
-    if (tabName==='about'||tabName==='courses') {
+    if (tabName==='about'||tabName==='courses'||tabName==='projects') {
         var popnum;
         if (tabName==='about') {
-            popnum = "#pop1"
+            popnum = "#pop1";
+        } else if (tabName==='courses'){
+            popnum = "#pop2";
         } else {
-            popnum = "#pop2"
+            popnum = "#pop3";
         };
         $(popnum).velocity("finish");
         $(popnum).velocity({
             translateY: "-15px"
-        },500).velocity("reverse");
+        },{duration:500, loop:2});
     }; 
 }
 // open home tab by default
@@ -61,9 +63,8 @@ function slideOpen(evt, sliding){
         for (i = 0; i < items.length; i++) {
             items[i].style.display = "none";
         }
-        $("#"+sliding).velocity("slideDown",{duration: 400});
-        document.getElementById(sliding).style.display = "block";
+        $("#"+sliding).velocity("slideDown",{duration: 500});
     } else {
-        document.getElementById(sliding).style.display = "none";
+        $("#"+sliding).velocity("slideUp",{duration: 500});
     }
 }

@@ -96,6 +96,9 @@ p {
 #c-align{
   text-align: center;
 }
+#slideselect:hover, .active{
+  background-color: #afafaf;
+}
 #tboxtop {
   text-align: left;
   height: 70px;
@@ -108,6 +111,32 @@ p {
   position: relative;
   top: -100px;
   visibility: hidden;
+}
+.close {
+  -moz-box-shadow:inset 0px 1px 0px 0px #474747;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #474747;
+  box-shadow:inset 0px 1px 0px 0px #474747;
+  background-color:#636363;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #474747;
+}
+.close:hover {
+  background-color:#000000;
+}
+.close:active {
+  position:relative;
+  top:1px;
 }
 .contact-images{
   float: left;
@@ -142,7 +171,7 @@ p {
   height: 100px;
 }
 .rolldown{
-  padding: 0 0 10px 20px;
+  padding: 5px 0 10px 20px;
   display: none;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -172,9 +201,6 @@ p {
 .slider{
   color: black;
   text-decoration: none;
-}
-#slideselect:hover, .active{
-  background-color: #afafaf;
 }
 .tab{
   margin: 130px auto;
