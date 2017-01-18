@@ -65,6 +65,6 @@ function slideOpen(evt, sliding){
         }
         $("#"+sliding).velocity("slideDown",{duration: 500});
     } else {
-        $("#"+sliding).velocity("slideUp",{duration: 500});
+        $("#"+sliding).velocity("slideUp",{duration: 300});
     }
 }
