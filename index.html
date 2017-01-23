@@ -262,7 +262,19 @@
           </div>
         </div>
       </div>
-      <a href='#top-projects' id="topper-projects">Back to Top</a>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'school-projects')"><div id="slideselect"><h2>School Projects</h2></div></a>
+        <div class="rolldown" id="school-projects">
+          <h3>ECE 3400: Robot Competition</h3>
+          <p>In this class, a group of 8 students and I had a project of making a self navigating robot that could navigate a maze like that shown in the video below. The robot was able to send a radio signal of its current location as well as the location of an infrared emitter located on the maze.</p>
+          <video class="video-index" preload="auto" controls="true" type="video/mp4" style="height:400px">
+            <source src="images/robot-race.mp4">
+          </video>
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Courses -->
     <div class="tab" id="courses">
