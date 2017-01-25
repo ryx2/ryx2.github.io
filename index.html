@@ -164,7 +164,7 @@
       <a class="anchor" id="via"></a>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'via-project')"><div id="slideselect"><h2>Vision and Image Analysis Group: Research with Professor Anthony Reeves in Computer Vision</h2></div></a>
-        <p>Studying computer vision and algorithm optimization using the VisionX Computer Vision and Image Processing System with the end goal of recognizing tumors in CT scans of lungs and determining their coordinates.</p>
+        <p>Studying computer vision and algorithm optimization using the VisionX Computer Vision and Image Processing System with the end goal of recognizing tumors in CT scans of lungs and determining their coordinates. These programs were written using tools from the VisionX software and in C.</p>
           <div class="rolldown" id="via-project">
             <h3>Identifying airways in lung CT scans and determining their orientation</h3>
             <div class="container-stretch">
@@ -176,13 +176,13 @@
               <img src="images/airway.png" style="width:150px" class="images">
             </div>
             <div class="container-stretch">
-              <p>This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets. An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program.</p>
+              <p>I am writing a program to differentiate between airways and air pockets, so that the overal program will be able to tell if the lung CT has air outiside of the airways and lung air sacs (alveoli). This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets.An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program. </p>
               <img src="images/sphere-cylinder.png" style="width:300px" class="images">
             </div>
             <img src="images/diagramalgorithm.png" style="width:600px" class="images">
             <div class="container-stretch">
               <h3>Canny edge detection in 3D</h3>
-              <p>This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise.</p>
+              <p> I wrote a program which has the purpose of creating a 3D boundary between two regions in a 3D image. This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise. </p>
               <img src="images/noisysphere.png" style="width:600px" class="images">
             </div>
             <div class="container-stretch">
@@ -204,16 +204,16 @@
       <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'leidos-project')"><div id="slideselect"><h2>Leidos</h2></div></a>
-        <p>Helped Leidos develop their synthetic aperture and plenoptic processing capabilities.</p>
+        <p>Helped Leidos develop their synthetic aperture and plenoptic processing capabilities. All projects were involving image processing in MATLAB.</p>
         <div class="rolldown" id="leidos-project">
           <h3> Occlusion Penetrating Imaging</h3>
-          <p>Taking multiple images of a scene, camera locations, and object
-            distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. Tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
-            <p>Source images, after calibration.</p>
+          <p> The goal of this image was to be able to take spy plane images, and track partially occluded targets. Taking multiple images of a scene, camera locations, and object
+            distance, this program will stitch together the scene behind the occluding object (often foliage) by overlaying the images with the pixel displacement to match the distance given and the camera positions. I tested this algorithm by taking images on my own cell phone of occluded scenes, and calibrating them to eliminate rotation or translational inaccuracies. I wrote the calibration and stitching programs in MATLAB.</p>
+            <p>Source images, after rotation and translational calibration to overcome the jitter that comes with acquiring these images on a cell phone.</p>
           <video class="video-index" preload="auto" controls="true" type="video/mp4">
             <source src="images/leidos-building-compressed.mp4">
           </video>
-          <p>Overlayed images with the depth given at the top of the image in millimeters.</p>
+          <p>This video focuses the images at a specific distance, by moving them on top of each other and averaging the pixel values. Partially occluded objects can be made out because they are usually not occluded in every single image. The "College Park" text and building become much more clear behind the bush. The displayed video is the overlayed images with the depth given at the top of the image in millimeters.</p>
           <div class="container-stretch"> 
             <video class="video-index" preload="auto" controls="true" type="video/mp4">
               <source src="images/range-sweep3.mp4">
@@ -221,7 +221,7 @@
           </div>
           <div class="container-stretch" controls="true">
             <h3>3D Point Cloud Generation</h3>
-            <p>Detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. Wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
+            <p>This program takes images of an object taken from different angles and generates a 3D model. It detects distance to every object in an image based on pixel disparity from multiple images of the object and known camera locations using stereo vision type range calculation with kernel matching. I wrote the function to discover pixel disparity using phase shift in the frequency domain.</p>
             <p>Source images of a lego truck</p>
             <video class="video-index" preload="auto" controls="true" type="video/mp4">
               <source src="images/truck.mp4">
@@ -253,10 +253,10 @@
       <a class="anchor" id="motion"></a>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'motion-project')"><div id="slideselect"><h2>Biorobotics and Locomotion Lab</h2></div></a>
-        <p>Researched human balance while standing, walking, running, and turning using pressure sensitive force plates.</p>
+        <p>Researched human balance while standing, walking, running, and turning using pressure sensitive force plates. The eventual goal of the project was to be able to understand how to make a walking robot by understanding how the center of mass of a human walking changed during the gait. Beginning to move in any direction was modeled after an upside-down pendulum, or inverse pendulum (before a person moved in any direction they would have to take a step in the opposite direciton to cause them to lean in the direction they would like to move in). </p>
         <div class="rolldown" id="motion-project">
-          <p>This program in MATLAB that read the data and created scatter plots to model where the feet were on the force plate over time.</p>
-          <img src="images/motion.png" style="width:600px"class="images">
+          <p>This program in MATLAB that read the data and created scatter plots to model where the feet were on the force plate over time. In this particular trial, the person was instructed to run right. Before running right, the person leans left, which follows the inverse pendulum model.</p>
+          <img src="images/motion2.png" style="width:600px"class="images">
           <div style="text-align:center">
             <a href="javascript:void(0)" onclick="slideOpen(event, 'motion-project')"><button class="close">Collapse</button></a>
           </div>

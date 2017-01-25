@@ -50,7 +50,7 @@ function openTab(evt, tabName) {
         $(popnum).velocity("finish");
         $(popnum).velocity({
             translateY: "-15px"
-        },{duration:500, loop:2});
+        },{duration:500, loop:3});
     }; 
 }
 // open home tab by default
