@@ -63,8 +63,10 @@ function slideOpen(evt, sliding){
         for (i = 0; i < items.length; i++) {
             items[i].style.display = "none";
         }
+        $("#"+sliding+"-expand").velocity("slideUp",{duration: 100})
         $("#"+sliding).velocity("slideDown",{duration: 500});
     } else {
         $("#"+sliding).velocity("slideUp",{duration: 300});
+        $("#"+sliding+"-expand").velocity("slideDown",{duration: 100})
     }
 }
