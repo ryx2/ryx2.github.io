@@ -175,6 +175,22 @@
       <h5 id="pop3">Click on the projects to see descriptions and images.</h5>
       <a class="anchor" id="via"></a>
       <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Lockheed-Martin')"><div id="slideselect"><h2>Lockheed Martin</h2></div></a>
+        <p>Automated USPS driver monitoring for illegal/reckless driving using GPS data. Researched and wrote an image/signal processing program to recognize enemy radar chirps in electronic warfare.</p>
+        <div style="text-align:center" id="Lockheed-Martin-expand">
+          <a href="javascript:void(0)" onclick="slideOpen(event, 'Lockheed-Martin')"><button class="close">Expand</button></a>
+        </div>
+        <div class="rolldown" id="Lockheed-Martin">
+          <h3>Automated driver monitoring</h3>
+          <p>Automated USPS driver monitoring for illegal/reckless driving using noisy GPS data. The program was designed to detect left turns and U-turns in the routes and map out their locations. </p>
+          <h3>Cognitive radar classification</h3>
+          <p>Researched and wrote an image/signal processing program to recognize enemy radar chirps in electronic warfare. The program receives a radar signal, transforms it into a spectrogram image, then filters that image and applies computer vision techniques to create recognizable features. A machine learning neural net then uses the processed image to classify incoming radar as different adversaries. Wrote and tested the program in C++ for industrial use after testing concepts in MATLAB.</p>
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'Lockheed-Martin')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'school-projects')"><div id="slideselect"><h2>School Projects</h2></div></a>
         <p>Final projects for some my courses, demonstrated here with photos and video. </p>
         <div style="text-align:center" id="school-projects-expand">
