@@ -187,7 +187,9 @@
           <h3>Automated driver monitoring</h3>
           <p>Automated USPS driver monitoring for illegal/reckless driving using noisy GPS data. The program was designed to detect left turns and U-turns in the routes and map out their locations. </p>
           <h3>Cognitive radar classification</h3>
-          <p>Researched and wrote an image/signal processing program to recognize enemy radar chirps in electronic warfare. The program receives a radar signal, transforms it into a spectrogram image, then filters that image and applies computer vision techniques to create recognizable features. A machine learning neural net then uses the processed image to classify incoming radar as different adversaries. Wrote and tested the program in C++ for industrial use after testing concepts in MATLAB.</p>
+          <p>Researched and wrote an image/signal processing program to recognize enemy radar chirps in electronic warfare. The program receives a radar signal, transforms it into a spectrogram image, then filters that image and applies computer vision techniques to create recognizable features. A machine learning neural net then uses the processed image to classify incoming radar as different adversaries. Wrote and tested the program in C++ for industrial use after testing concepts in MATLAB.
+          <img src="images/lockheedRadar.png" style="width:100%; max-width: 1000px; padding: 15px 0 0 0;" class="images">
+          </p>
           <div style="text-align:center">
             <a href="javascript:void(0)" onclick="slideOpen(event, 'Lockheed-Martin')"><button class="close">Collapse</button></a>
           </div>
@@ -210,7 +212,7 @@
           </video>
           <h3>ECE 4250: Super Resolution Imaging</h3>
           <p>For this project, our group took multiple images of my room, calibrated them, added them, and averaged them to obtain an image with more information than any single image. This was supported with some image SNR metrics. <a href="https://docs.google.com/presentation/d/15F1XexYetpaGs4-ytYM74lFMtaI1FJfvd40XvJmVDE4/edit?usp=sharing" target="_blank">Here</a> is a link to the presentation for more information.
-          <img src="images/4250project.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+          <img src="images/4250project.png" style="width:100%; max-width: 1000px; padding: 15px 0 0 0;" class="images">
           </p>
           <div style="text-align:center">
             <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Collapse</button></a>
@@ -228,7 +230,7 @@
             <h3>Identifying airways in lung CT scans and determining their orientation</h3>
             <div class="container-stretch">
               <p>This is one slice of a CT scan of the chest. The two darker lobes in the image are the lungs, and the white parts within them are mostly vessels and airways. These images were taken from The Cancer Imaging Archive <sup><a href="#tcia-cite" style="text-decoration:none">[1]</a></sup></p>
-              <img src="images/ct.png" style="width:600px" class="images">
+              <img src="images/ct.png" style="width:100%; max-width: 1000px;" class="images">
             </div>
             <div class="container-stretch">
               <p>This is a slice of a airway, zoomed in. The filled in circle is a blood vessel, and the hollow circle is an airway.</p>
@@ -238,15 +240,15 @@
               <p>I am writing a program to differentiate between airways and air pockets, so that the overal program will be able to tell if the lung CT has air outiside of the airways and lung air sacs (alveoli). This diagram demonsrates what is meant by "orientation of an airway". Another program developed by the Vision and Image analysis group is able to point out locations of sphere shaped pockets of air within the lung, and their radii. Airways trigger this program and their locations are listed within the large list of locations of air pockets.An airway candidate can be determined by using moments analysis. Because a sphere intersecting with a cylinder (the assumed model of an airway) is a ring, this ring can be seen and interpreted by the program. </p>
               <img src="images/sphere-cylinder.png" style="width:300px" class="images">
             </div>
-            <img src="images/diagramalgorithm.png" style="width:600px" class="images">
+            <img src="images/diagramalgorithm.png" style="width:100%; max-width: 1000px;" class="images">
             <div class="container-stretch">
               <h3>Canny edge detection in 3D</h3>
               <p> I wrote a program which has the purpose of creating a 3D boundary between two regions in a 3D image. This program takes in the gradient and performs non maximum suppression and thresholding with hysteresis on a 3D gradient file. This image is a slice of a noisy sphere generated using the VisionX software system for image processing and computer vision. On the left, a sphere added onto a background in a 3D image. In the center, that same sphere with added noise. One the right, the gradient magnitude of the image with added noise. </p>
-              <img src="images/noisysphere.png" style="width:600px" class="images">
+              <img src="images/noisysphere.png" style="width:100%; max-width: 1000px;" class="images">
             </div>
             <div class="container-stretch">
               <p>This image is a slice of the sphere, zoomed in, and demonstrating non maximum suppression to obtain a 1 pixel thick edge. On the left, the original image section, zoomed in. In the center, the same region after the applied non-maximum suppression. On the right, the image of the difference between the original and the image after the program (red pixels are the same as the original, green pixels have been removed by the program).</p>
-              <img src="images/nms.png" style="width:600px" class="images">
+              <img src="images/nms.png" style="width:100%; max-width: 1000px;" class="images">
             </div>
             <a class="anchor"  id="tcia-cite"></a>
             <div class="container-stretch">
