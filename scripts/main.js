@@ -21,9 +21,22 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
     if (tabName==='home') {
         if(loaded === "false"){
-            $(window).on("load", function() {
+            //only trigger animation when the css has loaded on the page
+            // if (!$("link[href='../styles/style.css']").length){
+            //     $('<link href="../styles/style.css" rel="stylesheet">').appendTo("head");
+            // }
+            // var url = "../styles/style.css",
+            // head = document.getElementsByTagName('head')[0];
+            // link = document.createElement('link');
+
+            // link.type = "text/css";
+            // link.rel = "stylesheet"
+            // link.href = "../styles/style.css";
+            
+            // link.onload = function () {
+            $(window).on("load",function(){
                 loaded = "true";
-                $("#hometab").velocity({
+                $("#hometab").delay(200).velocity({
                     marginLeft: '200px',
                     fontSize: '2.5em'
                 },2000,[400,20]); /*velocity's spring animation for a 1.2 seconds*/
