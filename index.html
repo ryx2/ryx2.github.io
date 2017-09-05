@@ -176,7 +176,21 @@
     <div class="tab" id="projects">
       <a class="top-anchor" id="top-projects"></a>
       <h5 id="pop3">Click on the projects to see descriptions and images.</h5>
-      <a class="anchor" id="via"></a>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Mert')"><div id="slideselect"><h2>Master of Engineering Design Project: Machine Learning in Sabuncu Lab</h2></div></a>
+        <p>Image registration/optical flow of 3D brain MRIs: fast calibration & transformation into standard space. Utilized convolutional neural networks on modern machine learning frameworks PyTorch and TensorFlow.</p>
+        <div style="text-align:center" id="Mert-expand">
+          <a href="javascript:void(0)" onclick="slideOpen(event, 'Mert')"><button class="close">Expand</button></a>
+        </div>
+        <div class="rolldown" id="Mert">
+          <h3>Project Goal</h3>
+          <p>Currently, 3D image registration is done with an optimization process, which is slow. Because the database of brain MRI scans is so large, the transformations can be memorized by a machine given the shape of a given brain. The goal is to speed this process up with a convolutional nerual networks so the process becomes one step instead of iterative, speeding up the process. 
+          </p>
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'Mert')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
+      </div>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Lockheed-Martin')"><div id="slideselect"><h2>Lockheed Martin</h2></div></a>
         <p>Automated USPS driver monitoring for illegal/reckless driving using GPS data. Researched and wrote an image/signal processing program to recognize enemy radar chirps in electronic warfare.</p>
@@ -262,7 +276,6 @@
             </div>
           </div>
       </div>
-      <a class="anchor" id="leidos"></a>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'leidos-project')"><div id="slideselect"><h2>Leidos</h2></div></a>
         <p> May 2016 - Aug 2016</p>
@@ -303,7 +316,6 @@
           </div>
         </div>
       </div>
-      <a class="anchor" id="website"></a>
       <div class="container-stretch">
         <div id="slideselect"><h2>This Website</h2></div>
         <p> Jan 2017 -</p>
@@ -316,7 +328,6 @@
           </div>
         </div>
       </div>
-      <a class="anchor" id="motion"></a>
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'motion-project')"><div id="slideselect"><h2>Biorobotics and Locomotion Lab</h2></div></a>
         <p> May 2015 - Aug 2015</p>
