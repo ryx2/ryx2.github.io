@@ -23,7 +23,7 @@ function openTab(evt, tabName) {
         if(loaded === "false"){
             $(window).on("load", function() {
                 loaded = "true";
-                $("#hometab").delay(200).velocity({
+                $("#hometab").velocity({
                     marginLeft: '200px',
                     fontSize: '2.5em'
                 },2000,[400,20]); /*velocity's spring animation for a 1.2 seconds*/
