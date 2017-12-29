@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <html lang="en-US">
+    <title>Raymond Xu</title>
+    <meta name="author" content="Raymond Xu">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type='text/css'>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-89449139-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
+    <meta http-equiv="Cache-control" content="public">
+  </head>
+  <body onload="openTab('courses')">
+    <!-- Header and nav bar -->
+    <div id="header">
+      <div id="headerContent">
+          <h1>Raymond Xu</h1>
+        <ul id="bar">
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'index')" id="default">Home</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'about')">About</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
+          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('courses')">Courses</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'contact')">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Courses -->
+    <div class="tab" id="courses">
+      <a class="top-anchor" id="top-courses"></a>
+      <h5 id="pop2">Click courses to see descriptions.</h5>
+      <h5>All descriptions come from the <a href="https://classes.cornell.edu" target="_blank">classes.cornell.edu</a> webpage. The images are pulled from the homeworks and labs of the courses. </h5>
+      <h2>Electrical and Computer Engineering</h2>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2100')"><div id="slideselect" style="height:100%"><p><b>ECE 2100</b> Introduction to Circuits for Electrical and Computer Engineers</p></div></a>
+        <p class="rolldown" id="2100">First course in electrical circuits and electronics. Establishes the fundamental properties of circuits with application to modern electronics. Topics include circuit analysis methods, operational amplifiers, basic filter circuits, and elementary transistor principles. The laboratory experiments are coupled closely with the lectures.
+        <img src="images/2100image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2200')"><div id="slideselect" style="height:100%"><p><b>ECE 2200</b> Signals and Information</p></div></a>
+        <p class="rolldown" id="2200">Introduction to signal processing. Topics include frequency-based representations: Fourier analysis and synthesis; discrete time linear systems: input/output relationships, filtering, spectral response; analog-to-digital and digital-to-analog conversion; continuous time signals and linear time invariant systems: frequency response and continuous-time Fourier transform.
+        <img src="images/2200image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2300')"><div id="slideselect" style="height:100%"><p><b>ECE 2300</b> Digital Logic and Computer Organization</p></div></a>
+        <p class="rolldown" id="2300">This course provides an introduction to the design and implementation of digital circuits and microprocessors. Topics include transistor network design, Boolean algebra, combinational circuits, sequential circuits, finite state machine design, processor pipelines, and memory hierarchy. Design methodology using both discrete components and hardware description languages is covered in the laboratory portion of the course.
+        <img src="images/2300image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3100')"><div id="slideselect" style="height:100%"><p><b>ECE 3100</b> Introduction to Probability and Inference for Random Signals and Systems</p></div></a>
+        <p class="rolldown" id="3100">Introduction to probabilistic techniques for modeling random phenomena and making estimates, inferences, predictions, and engineering decisions in the presence of chance and uncertainty. Probability measures, classical probability and combinatorics, countable and uncountable sample spaces, random variables, probability mass functions, probability density functions, cumulative distribution functions, important discrete and continuous distributions, functions of random variables including moments, independence and correlation, conditional probability, Total Probability and Bayes' rule with application to random system response to random signals, characteristic functions and sums of random variables, the multivariate Normal distribution, maximum likelihood and maximum a posteriori estimation, Neyman-Pearson and Bayesian statistical hypothesis testing, Monte Carlo simulation. Applications in communications, networking, circuit design, device modeling, and computer engineering.
+        <img src="images/3100image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3140')"><div id="slideselect" style="height:100%"><p><b>ECE 3140</b> Embedded Systems</p></div></a>
+        <p class="rolldown" id="3140">An introduction to the design of embedded systems, with an emphasis on understanding the interaction between hardware, software, and the physical world. Topics covered include assembly language programming, interrupts, I/O, concurrency management, scheduling, resource management, and real-time constraints.
+        <br/>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YPHC3Jr1OYA" frameborder="0" allowfullscreen style="padding: 15px 0 0 0"></iframe>
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3150')"><div id="slideselect" style="height:100%"><p><b>ECE 3150</b> Introduction to Microelectronics</p></div></a>
+        <p class="rolldown" id="3150">This is a comprehensive undergraduate level course on microelectronics. Topics covered include basic semiconductor physics, electrons and holes in semiconductors, electrical transport in semiconductors, PN junctions and diodes, photodetectors and solar cells, Metal-Oxide-Semiconductor (MOS) capacitors, MOS field effect transistors (FETs), bipolar junction transistors (BJTs), large signal and small signal models of electronic devices, single stage amplifiers, multistage amplifiers, differential amplifiers, analog circuit analysis and design, high-frequency models of devices, high-frequency circuit analysis, digital logic and MOS logic devices, complimentary MOS (or CMOS) logic gates, fundamental trade-offs in high speed analog and digital circuit design. The coursework includes labs and a final project.
+        <img src="images/3150image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3250')"><div id="slideselect" style="height:100%"><p><b>ECE 3250</b> Mathematics of Signal and System Analysis</p></div></a>
+        <p class="rolldown" id="3250">Course aims to deepen students' working knowledge of mathematical tools relevant to ECE applications. While the course emphasizes fundamentals, it also provides an ECE context for the topics it covers, which include foundational material about sets and functions; modular arithmetic and public-key cryptography; inner products, orthogonal representations, and Fourier analysis; LTI systems as mappings on function spaces; sampling and interpolation; singular-value decomposition; and, as time permits, an introduction to wavelets and elementary convex analysis.
+        <img src="images/3250image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '3400')"><div id="slideselect" style="height:100%"><p><b>ECE 3400</b> Electrical and Computer Engineering Practice and Design</p></div></a>
+        <p class="rolldown" id="3400">A brief history of electrical and computer engineering, the core subjects that define the field today, the ethical standards of its practice, and instruction in the elements of the process of designing electrical devices and systems. Students engage in experiential-learning design projects in which they will use the design process strategies to function well on a team and to design a system that meets customer needs and electrical engineering constraints.
+
+        In this class, a group of 8 students and I had a project of making a self navigating robot that could navigate a maze like that shown in the video below. The robot was able to send a radio signal of its current location as well as the location of an infrared emitter located on the maze.
+        <br/>
+        <video class="video-index" preload="auto" controls="true" type="video/mp4" style="height:400px; padding: 15px 0 0 0;">
+          <source src="images/robot-race.mp4">
+        </video>
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4250')"><div id="slideselect" style="height:100%"><p><b>ECE 4250</b> Digital Signal and Image Processing</p></div></a>
+        <p class="rolldown" id="4250">Introduces statistical signal processing. Signal representation and manipulation are covered via correlation and using the DFT/FFT to estimate other transforms; applications of these topics are then covered, including quantization, quantization effects in digital filters, multirate DSP, filter banks, delta-sigma modulation, power spectrum estimation, and introductions to Wiener and Kalman filtering and image processing.
+        <img src="images/4250image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4300')"><div id="slideselect" style="height:100%"><p><b>ECE 4300</b> Lasers and Optoelectronics</p></div></a>
+        <p class="rolldown" id="4300">Introduction to the operation, physics, and application of lasers. The course covers diffraction-limited optics, Gaussian beams, optical resonators, the interaction of radiation with matter, stimulated emission, rate equations, and laser design. Examples of coherent radiation to nonlinear optics, communication, and leading-edge research are frequently used.  Course concludes with a lab where students design and then build a laser.
+        <img src="images/4300image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4950')"><div id="slideselect" style="height:100%"><p><b>ECE 4950</b> Special Topics in Electrical and Computer Engineering: Machine Learning &amp Pattern Recognition</p></div></a>
+        <p class="rolldown" id="4950">The course will be devoted to understanding, implementation, and applications of various machine learning primitives. We will cover several unsupervised, and supervised learning techniques. Supervised learning includes regression, support vector machines, decision trees, random forests, naïve bayes, boosting and bagging. Unsupervised learning includes clustering, k-means, k-NN, principal components analysis and other dimensionality reduction methods. We will also cover Mixture of Gaussians, the EM algorithm, and the Viterbi algorithm. We will give particular emphasis on applications in ECE, e.g., text data, hand-writing, music, image, and time series data, and categorical datasets such those in recommendation systems. The course will have a programming component, which will be administered in the form of assignments, or in-class-kaggle competitions.
+        <img src="images/4950image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '5470')"><div id="slideselect" style="height:100%"><p><b>ECE 5470</b> Computer Vision</p></div></a>
+        <p class="rolldown" id="5470">Covers computer acquisition and analysis of image data with emphasis on techniques for robot vision. Concentrates on descriptions of objects at three levels of abstraction: segmented images (images organized into subimages that are likely to correspond to interesting objects), geometric structures (quantitative models of image and world structures), and relational structures (complex symbolic descriptions of images and world structures). The programming of several computer-vision algorithms is required.
+        <img src="images/5470image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <h2><b>Computer Science</b></h2>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '1112')"><div id="slideselect" style="height:100%"><p><b>CS 1112</b> Introduction to Computing Using MATLAB</p></div></a>
+        <p class="rolldown" id="1112">Programming and problem solving using MATLAB. Emphasizes the systematic development of algorithms and programs. Topics include iteration, functions, arrays, recursion, object-oriented programming, and MATLAB graphics. Assignments are designed to build an appreciation for complexity, dimension, fuzzy data, inexact arithmetic, randomness, simulation, and the role of approximation.
+        <img src="images/1112image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2110')"><div id="slideselect" style="height:100%"><p><b>CS 2110</b> Introduction to Object Oriented Programming</p></div></a>
+        <p class="rolldown" id="2110">Intermediate programming in a high-level language and introduction to computer science. Topics include program structure and organization, object-oriented programming (classes, objects, types, sub-typing), graphical user interfaces, algorithm analysis (asymptotic complexity, big "O" notation), recursion, data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms. Java is the principal programming language.
+        <img src="images/2110image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '2800')"><div id="slideselect" style="height:100%"><p><b>CS 2800</b> Discrete Structures</p></div></a>
+        <p class="rolldown" id="2800">Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.
+        <img src="images/2800image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, '4820')"><div id="slideselect" style="height:100%"><p><b>CS 4820</b> Introduction to Analysis of Algorithms</p></div></a>
+        <p class="rolldown" id="4820">Develops techniques used in the design and analysis of algorithms, with an emphasis on problems arising in computing applications. Example applications are drawn from systems and networks, artificial intelligence, computer vision, data mining, and computational biology. This course covers four major algorithm design techniques (greedy algorithms, divide-and-conquer, dynamic programming, and network flow), undecidability and NP-completeness, and algorithmic techniques for intractable problems (including identification of structured special cases , approximation algorithms, local search heuristics, and online algorithms).
+        <br>
+        <br>
+        One dynamic program I wrote for the class is here:
+        <img src="images/4820image.png" style="width:600px; padding: 15px 0 0 0;" class="images">
+        </p>
+      </div>
+      <div class="container-stretch">
+        <div style="float:right">*in progress</div>
+      </div>
+      <a href="#top-courses" id="topper-courses">Back to top</a>
+    </div>
+  </body>
+  <script src="scripts/main.js"></script>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <html lang="en-US">
+    <title>Raymond Xu</title>
+    <meta name="author" content="Raymond Xu">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type='text/css'>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-89449139-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
+    <meta http-equiv="Cache-control" content="public">
+  </head>
+  <body onload="openTab('about')">
+    <!-- Header and nav bar -->
+    <div id="header">
+      <div id="headerContent">
+          <h1>Raymond Xu</h1>
+        <ul id="bar">
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'index')" id="default">Home</a></li>
+          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('about')">About</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'courses')">Courses</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'contact')">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- About -->
+    <div class="tab" id="about">
+      <a class="top-anchor" id="top-about"></a>
+      <p>I am a senior/masters student at Cornell University studying electrical and computer engineering, set to graduate with my Bachelor of Science in December 2017. I am in the early admit program for a master of engineering degree at Cornell, graduating with my masters in May 2018. I grew up in Ithaca, NY. In my spare time I like playing basketball, guitar, listening to music, traveling, and dancing.</p>
+      <div class="container-stretch" style="padding: 25px 0 15px 0;">
+        <img src="images/perkins-guitar.jpg" style="width:100%; max-width: 800px" class="images">
+      </div>
+      <h5 id="pop1">Click images to get linked to explanatory webpages!</h5>
+      <div class="container-stretch"><h2 align="center">Education</h2></div>
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://www.ece.cornell.edu/" target="_blank">
+            <img src="images/cornell-ece.gif" class="scaledim" id="float-right" style="padding: 15px 0 0 0;">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Master of Engineering (M.Eng)</p>
+            <p class="skinny"> 2017-2018</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://www.ece.cornell.edu/" target="_blank">
+            <img src="images/cornell-ece.gif" class="scaledim" id="float-right" style="padding: 15px 0 0 0;">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Bachelor of Science</p>
+            <p class="skinny"> 2014-2017</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <div class="container-stretch" id="c-align"><h2 align="center">Work</h2></div>
+      <!-- Lockheed -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="http://www.lockheedmartin.com/us.html" target="_blank">
+            <img src="images/lockheed.jpg" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny"><a href="http://www.lockheedmartin.com/us/rms.html" target="_blank">RMS</a> Software Engineering Intern</p>
+            <p class="skinny">May-Aug 2017</p>
+            <p class="skinny"><em>Owego, NY</em></p></b>
+        </div>
+      </div>
+      <!-- Leidos -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://www.leidos.com/" target="_blank">
+            <img src="images/leidos.jpeg" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Electro-Optical Engineering Intern</p>
+            <p class="skinny">May - Aug 2016</p>
+            <p class="skinny"><em>Dayton, OH</em></p></b>
+        </div>
+      </div>
+      <div class="container-stretch" id="c-align">
+        <h2 align="center">Research</h2>
+      </div>
+      <!-- Via -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="http://www.via.cornell.edu/" target="_blank">
+            <img src="images/via.PNG" class="scaledim" id="float-right" style="padding: 10px 0 0 0;">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Researcher: Computer Vision</p>
+            <p class="skinny">Jan 2016 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <!-- Ruina Lab -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="http://ruina.tam.cornell.edu/research/" target="_blank">
+            <img src="images/biorobotics.png" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop" style="padding: 25px 0 0 0;">
+          <b><p class="skinny">Researcher: Walking Simulation</p>
+            <p class="skinny">May - Aug 2015</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <div class="container"><h2 align="center">Extracurricular Activities</h2></div>
+      <!-- Peer Advising -->
+      <div class="container-stretch" id="c-align" style="padding: 15px 0 0 0;">
+        <div class="scaleddiv">
+          <a href="http://www.engineering.cornell.edu/academics/undergraduate/assistance/peer/" target="_blank">
+            <img src="images/cornell-eng.gif" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Peer Advisor</p>
+            <p class="skinny">Aug 2016 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <!-- WVBR -->
+      <div class="container-stretch" id="c-align" style="padding: 15px 0 0 0;">
+        <div class="scaleddiv">
+          <a href="http://www.wvbr.com/" target="_blank">
+            <img src="images/wvbr.png" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Radio Talk show host</p>
+            <p class="skinny">Aug 2015 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <!-- Guitar -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://www.youtube.com/channel/UC95r3JQiUJk0cgiuPFu_gLA" target="_blank">
+            <img src="images/guitar.PNG" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Classical Guitar Performer</p>
+            <p class="skinny"> 2010 - Present</p>
+            <p class="skinny"><em>Ithaca, NY</em></p></b>
+        </div>
+      </div>
+      <a href="#top-about" id="topper-about">Back to top</a>
+    </div>
+    </body>
+  <script src="scripts/main.js"></script>
+</html>

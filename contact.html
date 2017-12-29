@@ -22,25 +22,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
     <meta http-equiv="Cache-control" content="public">
   </head>
-  <body onload="openTab('index')">
+  <body onload="openTab('contact')">
     <!-- Header and nav bar -->
     <div id="header">
       <div id="headerContent">
           <h1>Raymond Xu</h1>
         <ul id="bar">
-          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('index')" id="index">Home</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'index')" id="default">Home</a></li>
           <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'about')">About</a></li>
           <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
           <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'courses')">Courses</a></li>
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'contact')">Contact</a></li>
+          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('contact')">Contact</a></li>
         </ul>
       </div>
     </div>
-    <!-- Home -->
-    <div class="tab" id="home">
-      <div id="hometab"><h2>Ithaca, NY</h2></div>
-      <a id="topper-home"></a>
+    <!-- Contact -->
+    <div class="tab" id="contact">
+      <a class="top-anchor" id="top-contact"></a>
+      <div class="container-stretch">
+        <div class="contact-images">
+          <a href="mailto:ryx2@cornell.edu" target="_top">
+            <img src="images/email.jpg" class="contact-images">
+          </a>
+        </div>
+        <p><a href="mailto:ryx2@cornell.edu" target="_top">ryx2@cornell.edu</a></p>
+      </div>
+      <div class="container-stretch">
+        <div class="contact-images">
+          <a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">
+            <img src="images/linkedin.png" class="contact-images">
+          </a>
+        </div>
+        <p><a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">Linkedin</a></p>
+      </div>
+      <a href="#top-contact"></a>
     </div>
-  </body>
+    </body>
   <script src="scripts/main.js"></script>
 </html>
