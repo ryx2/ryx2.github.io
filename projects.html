@@ -40,6 +40,7 @@
     <div class="tab" id="projects">
       <a class="top-anchor" id="top-projects"></a>
       <h5 id="pop3">Click on the projects to see descriptions and images.</h5>
+      <!-- mert -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Mert')"><div id="slideselect"><h2>Master of Engineering Design Project: Machine Learning in Sabuncu Lab</h2></div></a>
         <p>August 2017 - Present</p>
@@ -58,6 +59,31 @@
           </div>
         </div>
       </div>
+      <!-- expedition -->
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'exp')"><div id="slideselect"><h2>Expedition Technologies</h2></div></a>
+        <p>Dec 2017 - Present</p>
+        <p>Used machine learning to classify 1D radar chirp emitters with an autoencoder neural network in TensorFlow. Fine tuned neural networks, and improved data preprocessing to increase accuracy and prevent overfitting on classes with limited data. Scripted in python and bash, running code on AWS.
+        </p>
+        <div style="text-align:center" id="exp-expand">
+          <a href="javascript:void(0)" onclick="slideOpen(event, 'exp')"><button class="close">Expand</button></a>
+        </div>
+        <div class="rolldown" id="exp">
+          <p>My work with the company was entirely building and perfecting a single model to classify radar emitters; even when those radars emitted signals that were different frequencies, frequency patterns, time lengths, and bandwidths. </p>
+          <h3>Architecture Description</h3>
+          
+          <p>The architecture involved taking FFT's of the data, doing a couple convolutional filters on groups of them, and then inputting each FFT into a long short-term memory netowork (LSTM), one per time step. The LSTM states then learned how to interpret the signals. The output of the the LSTM is trained with an autoencoder, with the loss being the comparison with the original signal. Then, then network is trained by attaching the LSTM to several dense neural network layers. The network was able to achieve >95% test accuracy on the emitter classification.
+          </p>
+          <p>This is the t-distributed stochastic neighbor embedding (tsne) viewing of the training data for the encodings of the dozen radar emitter classes. The data looks relatively separable. </p>
+          <p><img src="images/train-tsne.jpg" style="width:100%; max-width: 1000px;" class="images"></p> 
+          <p>This is the tsne of the test data. The encoder does not overfit, as the two look very similar.</p>   
+          <p><img src="images/test-tsne.jpg" style="width:100%; max-width: 1000px;" class="images"></p>    
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'exp')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
+      </div>
+      <!-- lockheed -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Lockheed-Martin')"><div id="slideselect"><h2>Lockheed Martin</h2></div></a>
         <p>June 2017 - August 2017</p>
@@ -77,6 +103,7 @@
           </div>
         </div>
       </div>
+      <!-- school -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'school-projects')"><div id="slideselect"><h2>School Projects</h2></div></a>
         <p>Final projects for some my courses, demonstrated here with photos and video. </p>
@@ -146,6 +173,7 @@
             </div>
           </div>
       </div>
+      <!-- leidos -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'leidos-project')"><div id="slideselect"><h2>Leidos</h2></div></a>
         <p> May 2016 - Aug 2016</p>
@@ -186,6 +214,7 @@
           </div>
         </div>
       </div>
+      <!-- website -->
       <div class="container-stretch">
         <div id="slideselect"><h2>This Website</h2></div>
         <p> Jan 2017 - Present</p>
@@ -198,6 +227,7 @@
           </div>
         </div>
       </div>
+      <!-- ruina -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'motion-project')"><div id="slideselect"><h2>Biorobotics and Locomotion Lab</h2></div></a>
         <p> May 2015 - Aug 2015</p>
