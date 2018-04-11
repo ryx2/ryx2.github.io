@@ -44,7 +44,7 @@
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'Mert')"><div id="slideselect"><h2>Master of Engineering Design Project: Machine Learning in Sabuncu Lab</h2></div></a>
         <p>August 2017 - Present</p>
-        <p>Image registration/optical flow of 3D brain MRIs: fast calibration & transformation into standard space. Utilized convolutional neural networks on modern machine learning frameworks PyTorch and TensorFlow.
+        <p>Image registration/optical flow of 3D brain MRIs: fast calibration & transformation into standard space. Ran other's code of convolutional neural networks on modern machine learning frameworks PyTorch and TensorFlow, but I developed my own code in Keras with TensorFlow backend.
         </p>
         <div style="text-align:center" id="Mert-expand">
           <a href="javascript:void(0)" onclick="slideOpen(event, 'Mert')"><button class="close">Expand</button></a>
@@ -54,9 +54,15 @@
           <p>Currently, 3D image registration is done with an optimization process, which is slow. Because the database of brain MRI scans is so large, the transformations can be memorized by a machine given the shape of a given brain. The goal is to speed this process up with a convolutional nerual networks so the process becomes one step instead of iterative, speeding up the process. 
           </p>
           <p><img src="images/mert-brains.jpg" style="width:100%; max-width: 1000px;" class="images"></p>    
+          <p>I designed a model to do this 3D registration with siamese convolutional layers and a spatial transformer network, using MSE as loss. The model worked well - it reduces the MSE between the input brains on the validation data set by 35%. Here is an architecture model outline:</p>
+          <p><img src="images/model.jpg" style="width:100%; max-width: 1000px;" class="images"></p> 
+          <p>Here is a demonstration of the feature maps and output from two input brains:</p>
+          <p><img src="images/model-demo.jpg" style="width:100%; max-width: 1000px;" class="images"></p> 
+
           <div style="text-align:center">
             <a href="javascript:void(0)" onclick="slideOpen(event, 'Mert')"><button class="close">Collapse</button></a>
           </div>
+
         </div>
       </div>
       <!-- expedition -->
