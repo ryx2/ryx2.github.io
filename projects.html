@@ -55,10 +55,11 @@
           </p>
           <p><img src="images/mert-brains.jpg" style="width:100%; max-width: 1000px;" class="images"></p>    
           <p>I designed a model to do this 3D registration with siamese convolutional layers and a spatial transformer network, using MSE as loss. The model worked well - it reduces the MSE between the input brains on the validation data set by 35%. Here is an architecture model outline:</p>
-          <p><img src="images/model.png" style="width:100%; max-width: 1000px;" class="images"></p> 
+          <p><img src="images/modelDiagram.png" style="width:100%; max-width: 1000px;" class="images"></p> 
           <p>Here is a demonstration of the feature maps and output from two input brains:</p>
-          <p><img src="images/model-demo.png" style="width:100%; max-width: 1000px;" class="images"></p> 
-
+          <p><img src="images/demo.png" style="width:100%; max-width: 1000px;" class="images"></p> 
+          <p>Here we can see the registration at work; it can register 3D brains with an average MSE difference between the registered brain and the source reduced by 45% compared to the source and the target originally. In this pair of brains, a slice of the brains are shown to show the successful registration. </p>
+          <p><img src="images/registrationSuccess.png" style="width:100%; max-width: 1000px;" class="images"></p>
           <div style="text-align:center">
             <a href="javascript:void(0)" onclick="slideOpen(event, 'Mert')"><button class="close">Collapse</button></a>
           </div>
