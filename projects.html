@@ -66,6 +66,39 @@
 
         </div>
       </div>
+      <!-- school -->
+      <div class="container-stretch">
+        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'school-projects')"><div id="slideselect"><h2>School Projects</h2></div></a>
+        <p>Final projects for some my courses, demonstrated here with photos and video. </p>
+        <div style="text-align:center" id="school-projects-expand">
+          <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Expand</button></a>
+        </div>
+        <div class="rolldown" id="school-projects">
+          <h3>ECE 3140: Embedded Systems</h3>
+          <p>The final project here was using the FRDM kinetis k64f to light up an LED display. The difficulty here involved programming the board to be able to transmit i2c signals.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YPHC3Jr1OYA" frameborder="0" allowfullscreen style="padding: 15px 0 0 0"></iframe>
+          <h3>ECE 3400: Robot Competition</h3>
+          <p>In this class, a group of 8 students and I had a project of making a self navigating robot that could navigate a maze like that shown in the video below. The robot was able to send a radio signal of its current location as well as the location of an infrared emitter located on the maze.</p>
+          <p>
+            <video class="video-index" preload="auto" controls="true" type="video/mp4" style="height:400px">
+              <source src="images/robot-race.mp4">
+            </video>
+          </p>
+          <h3>ECE 4250: Super Resolution Imaging</h3>
+          <p>For this project, our group took multiple images of my room, calibrated them, added them, and averaged them to obtain an image with more information than any single image. This was supported with some image SNR metrics. <a href="https://docs.google.com/presentation/d/15F1XexYetpaGs4-ytYM74lFMtaI1FJfvd40XvJmVDE4/edit?usp=sharing" target="_blank">Here</a> is a link to the presentation for more information.
+          <p><img src="images/4250project.jpg" style="width:100%; max-width: 1000px; padding: 15px 0 0 0;" class="images"></p>
+          </p>
+          <h3>ECE 4760: Microcontrollers</h3>
+          <p>The recording studio was programmed on the pic32 and allowed users to play the guitar, bass, drumset, or use their voice to make looped recordings, with additional features like deleting recordings or layering instruments on top of one another during recordings. </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DRMiFPc-xtw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h3>ECE 5725: Embedded Operating Systems</h3>
+          <p>The dancing robot was a Raspberry Pi that listened to sounds with the microphone and performed beat detection in order to dance with the beat. </p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/h-QHV3aDBVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div style="text-align:center">
+            <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Collapse</button></a>
+          </div>
+        </div>
+      </div>
       <!-- expedition -->
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'exp')"><div id="slideselect"><h2>Expedition Technologies</h2></div></a>
@@ -110,36 +143,7 @@
           </div>
         </div>
       </div>
-      <!-- school -->
-      <div class="container-stretch">
-        <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'school-projects')"><div id="slideselect"><h2>School Projects</h2></div></a>
-        <p>Final projects for some my courses, demonstrated here with photos and video. </p>
-        <div style="text-align:center" id="school-projects-expand">
-          <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Expand</button></a>
-        </div>
-        <div class="rolldown" id="school-projects">
-          <h3>ECE 3140: Embedded Systems</h3>
-          <p>The final project here was using the FRDM kinetis k64f to light up an LED display. The difficulty here involved programming the board to be able to transmit i2c signals.</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/YPHC3Jr1OYA" frameborder="0" allowfullscreen style="padding: 15px 0 0 0"></iframe>
-          <h3>ECE 3400: Robot Competition</h3>
-          <p>In this class, a group of 8 students and I had a project of making a self navigating robot that could navigate a maze like that shown in the video below. The robot was able to send a radio signal of its current location as well as the location of an infrared emitter located on the maze.</p>
-          <p>
-            <video class="video-index" preload="auto" controls="true" type="video/mp4" style="height:400px">
-              <source src="images/robot-race.mp4">
-            </video>
-          </p>
-          <h3>ECE 4250: Super Resolution Imaging</h3>
-          <p>For this project, our group took multiple images of my room, calibrated them, added them, and averaged them to obtain an image with more information than any single image. This was supported with some image SNR metrics. <a href="https://docs.google.com/presentation/d/15F1XexYetpaGs4-ytYM74lFMtaI1FJfvd40XvJmVDE4/edit?usp=sharing" target="_blank">Here</a> is a link to the presentation for more information.
-          <p><img src="images/4250project.jpg" style="width:100%; max-width: 1000px; padding: 15px 0 0 0;" class="images"></p>
-          </p>
-          <h3>ECE 5725: Embedded Operating Systems</h3>
-          <p>The dancing robot was a Raspberry Pi that listened to sounds with the microphone and performed beat detection in order to dance with the beat. </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/h-QHV3aDBVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <div style="text-align:center">
-            <a href="javascript:void(0)" onclick="slideOpen(event, 'school-projects')"><button class="close">Collapse</button></a>
-          </div>
-        </div>
-      </div>
+
       <div class="container-stretch">
         <a href="javascript:void(0)" class="slider" onclick="slideOpen(event, 'via-project')"><div id="slideselect"><h2>Vision and Image Analysis Group: Research with Professor Anthony Reeves in Computer Vision</h2></div></a>
         <p>Jan 2016 - May 2017</p>
