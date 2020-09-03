@@ -32,32 +32,27 @@
           <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'about')">About</a></li>
           <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
           <!-- <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'courses')">Courses</a></li> -->
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'blog')">Blog</a></li>
-          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('contact')">Contact</a></li>
+          <li><a href="javascript:void(0)" class="menu active" onclick="goToTab(event, 'blog')">Blog</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="openTab('contact')">Contact</a></li>
         </ul>
       </div>
     </div>
     <!-- Contact -->
     <div class="tab" id="contact">
       <a class="top-anchor" id="top-contact"></a>
+      <h1>I have blog on Medium </h1><br>
       <div class="container-stretch">
-        <div class="contact-images">
-          <a href="mailto:ryx2@cornell.edu" target="_top">
-            <img src="images/email.jpg" class="contact-images">
-          </a>
-        </div>
-        <p><a href="mailto:raymond.y.xu@gmail.com" target="_top">raymond.y.xu@gmail.com</a></p>
+        <div id="retainable-rss-embed" 
+data-rss="https://medium.com/feed/@greenfish6"
+data-maxcols="3" 
+data-layout="grid" 
+data-poststyle="inline" 
+data-readmore="Read the rest" 
+data-buttonclass="btn btn-primary" 
+data-offset="-100"></div>
+       
       </div>
-      <div class="container-stretch">
-        <div class="contact-images">
-          <a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">
-            <img src="images/linkedin.png" class="contact-images">
-          </a>
-        </div>
-        <p><a href="https://www.linkedin.com/in/raymond-xu-986b3578?authType=NAME_SEARCH&authToken=gioa&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A277519926%2CauthType%3ANAME_SEARCH%2Cidx%3A3-1-5%2CtarId%3A1482626158647%2Ctas%3Aray" target="_blank">Linkedin</a></p>
-      </div>
-      <a href="#top-contact"></a>
-    </div>
     </body>
   <script src="scripts/main.js"></script>
+  <footer><script src="https://www.retainable.app/assets/retainable/rss-embed/retainable-rss-embed.js"></script></footer>
 </html>
