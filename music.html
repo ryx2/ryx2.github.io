@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <html lang="en-US">
+    <title>Raymond Xu</title>
+    <meta name="author" content="Raymond Xu">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type='text/css'>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-89449139-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="description" content="Raymond Xu's personal website">
+    <meta name="keywords" content="Machine Learning, Computer Vision, Cornell University Engineering">
+    <meta name="author" content="Raymond Xu">
+    <style>
+    /*@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');*/
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap');
+    </style>
+  </head>
+  <body onload="openTab('about')">
+    <!-- Header and nav bar -->
+    <div id="header">
+      <div id="headerContent">
+          <h1>Raymond Xu</h1>
+        <ul id="bar">
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'index')" id="default">Home</a></li>
+          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('music')">Music</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab('about')">About</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
+          <!-- <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'courses')">Courses</a></li> -->
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'blog')">Blog</a></li>
+          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'connect')">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- About -->
+    <div class="tab" id="about">
+      <a class="top-anchor" id="top-about"></a>
+      <div class="container"><h2 align="center">Artist name: Raymond Xu Vlog</h2></div>
+
+      <p style="text-align:center;">I am a very good rapper.</p>
+      <div class="container-stretch" style="padding: 25px 0 15px 0;">
+        <img src="images/music/philly_direct_plane_for_website_edited.jpg" style="width:100%; max-width: 800px" class="images">
+      </div>
+      <div class="container"><h2 align="center">Links</h2></div>
+      <!-- Peer Advising -->
+      <div class="container-stretch" id="c-align" style="padding: 15px 0 0 0;">
+        <div class="scaleddiv">
+          <a href="https://www.youtube.com/user/raymondxu6000/videos" target="_blank">
+            <img src="images/music/YouTube-Icon-Full-Color-Logo.wine.svg" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+            <p></p>
+            <p></p>
+            <p></p>
+          <b><p class="skinny"></p>
+          <b><p class="skinny">Youtube channel</p>
+          <b><p class="skinny"></p>
+            <p></p>
+            <p class="skinny"><em>Raymond Xu Vlog</em></p></b>
+        </div>
+      </div>
+      <!-- WVBR -->
+      <div class="container-stretch" id="c-align" style="padding: 15px 15px 40px 15px;">
+        <div class="scaleddiv">
+          <a href="https://open.spotify.com/artist/1X3wa7EVBxuwKM87GuHWSU?si=557EOPW9QA23W6vEdoRGjw" target="_blank">
+            <img src="images/music/Spotify_logo_with_text.svg" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny">Spotify page</p>
+            <p class="skinny"></p>
+            <p class="skinny"><em>Raymond Xu Vlog</em></p></b>
+        </div>
+      </div>
+      <!-- Guitar -->
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://www.instagram.com/xuraym/" target="_blank">
+            <img src="images/music/Instagram_logo_2016.svg" class="scaledim" id="float-right" height="250" width="250">
+          </a>
+        </div>
+        <div id="tboxtop">
+          <b><p class="skinny"></p>
+          <b><p class="skinny"></p>
+          <b><p class="skinny"></p>
+          <b><p class="skinny"></p>
+          <b><p class="skinny">Instagram</p>
+          <b><p class="skinny"></p>
+            <p class="skinny"></p>
+            <p class="skinny"><em>@xuraym</em></p></b>
+        </div>
+      
+      
+      </div>
+      <div class="container-stretch" id="c-align">
+        <div class="scaleddiv">
+          <a href="https://music.apple.com/us/artist/raymond-xu-vlog/1596460224" target="_blank">
+            <img src="images/music/Listen on Apple Music Badge.svg" class="scaledim" id="float-right">
+          </a>
+        </div>
+        <div id="tboxtop">
+            <p class="skinny"></p>
+            <p class="skinny"></p>
+            <p class="skinny"></p>
+          <b><p class="skinny">Apple Music</p>
+            <p class="skinny"></p>
+            <p class="skinny"><em>Raymond Xu Vlog</em></p></b>
+        </div>
+      
+      
+      </div>
+      <div class="container"><h2 align="center">Music videos</h2></div>
+      <div class="container-stretch" id="c-align" style="padding: 15px 0 0 0;">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YL58txZQvc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6MaXgZv3b12dvJG6ghQqY9?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/67XC9tba8VE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0XixCcEssZLxAmq0F12IML?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6qWTzyqCO_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3zeoPWpFGcMYF0sqq2HsHk?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+      <div class="container-stretch" style="padding: 25px 0 15px 0;">
+        <img src="images/music/philly_direct_brighter_plane_for_website.jpg" style="width:100%; max-width: 800px" class="images">
+      </div>
+      <a href="#top-about" id="topper-about">Back to top</a>
+    </div>
+    </body>
+  <script src="scripts/main.js"></script>
+</html>
