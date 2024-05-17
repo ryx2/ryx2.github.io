@@ -1,51 +1,365 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <html lang="en-US">
-    <title>Raymond Xu</title>
-    <meta name="author" content="Raymond Xu">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type='text/css'>
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-89449139-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
-    <meta http-equiv="Cache-control" content="public">
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-</style>
-  </head>
-  <body onload="openTab('index')">
-    <!-- Header and nav bar -->
-    <div id="header">
-      <div id="headerContent">
-          <h1>Raymond Xu</h1>
-        <ul id="bar">
-          <li><a href="javascript:void(0)" class="menu active" onclick="openTab('index')" id="index">Home</a></li>
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'music')">Music</a></li>
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'about')">About</a></li>
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'projects')">Projects</a></li>
-          <!-- <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'courses')">Courses</a></li> -->
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'blog')">Blog</a></li>
-          <li><a href="javascript:void(0)" class="menu" onclick="goToTab(event, 'connect')">Connect</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Home -->
-    <div class="tab" id="home">
-      <div id="hometab"><h2>Ithaca, NY</h2></div>
-      <a id="topper-home"></a>
-    </div>
-  </body>
-  <script src="scripts/main.js"></script>
+<head>
+  <title>Raymond's Fun Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 150px);
+      overflow: hidden;
+    }
+
+    .blurb {
+      position: absolute;
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      max-width: 250px;
+      cursor: grab;
+      user-select: none;
+      font-size: 18px;
+      line-height: 1.4;
+      z-index: 1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .blurb:hover {
+      transform: scale(1.05);
+    }
+
+    .blurb:active {
+      cursor: grabbing;
+    }
+
+    .poll {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      margin-top: 30px;
+    }
+
+    .poll h3 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .poll-message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+
+    .explosion {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('explosion.png');
+      background-size: cover;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Blurbs will be added dynamically here -->
+  </div>
+
+  <div class="poll">
+    <h3>What will happen to Raymond next?</h3>
+    <form>
+      <input type="radio" id="option1" name="poll" value="option1">
+      <label for="option1">Death</label><br>
+      <input type="radio" id="option2" name="poll" value="option2">
+      <label for="option2">He'll figure it out</label><br>
+      <input type="radio" id="option3" name="poll" value="option3">
+      <label for="option3">He will realize how dumb he really is</label><br>
+    </form>
+    <div class="poll-message"></div>
+  </div>
+
+  <script>
+    const blurbs = [
+      "raymond's rap music",
+      "raymond's poker vlog",
+      "raymond's real estate software startup",
+      "raymond",
+      "raymond's tiktok ideas",
+      "raymond's vlog",
+      "raymond's merch line",
+    ];
+
+    const blurbElements = [];
+    let draggedBlurb = null;
+    let dragOffsetX = 0;
+    let dragOffsetY = 0;
+    const maxSpeed = 1;
+    const friction = 0.99;
+    let windOrigin = { x: 0, y: 0 };
+    let windSpeed = 0.1;
+
+    function getRandomPosition() {
+      const container = document.querySelector('.container');
+      const containerRect = container.getBoundingClientRect();
+      const x = Math.random() * (containerRect.width - 250);
+      const y = Math.random() * (containerRect.height - 100);
+      return { x, y };
+    }
+
+    function createBlurb(blurbText, x, y) {
+      const div = document.createElement('div');
+      div.classList.add('blurb');
+      div.textContent = blurbText;
+      div.style.left = x + 'px';
+      div.style.top = y + 'px';
+      div.velocity = {
+        x: (Math.random() - 0.5) * maxSpeed,
+        y: (Math.random() - 0.5) * maxSpeed,
+      };
+      div.mass = blurbText.length;
+      div.addEventListener('mousedown', startDragging);
+      document.querySelector('.container').appendChild(div);
+      blurbElements.push(div);
+    }
+
+    function startDragging(event) {
+      draggedBlurb = event.target;
+      const rect = draggedBlurb.getBoundingClientRect();
+      dragOffsetX = event.clientX - rect.left;
+      dragOffsetY = event.clientY - rect.top;
+      document.addEventListener('mousemove', dragBlurb);
+      document.addEventListener('mouseup', stopDragging);
+    }
+
+    function dragBlurb(event) {
+      if (draggedBlurb) {
+        const container = document.querySelector('.container');
+        const containerRect = container.getBoundingClientRect();
+        const rect = draggedBlurb.getBoundingClientRect();
+        const newX = Math.max(0, Math.min(event.clientX - dragOffsetX, containerRect.width - rect.width));
+        const newY = Math.max(0, Math.min(event.clientY - dragOffsetY, containerRect.height - rect.height));
+        draggedBlurb.style.left = newX + 'px';
+        draggedBlurb.style.top = newY + 'px';
+        draggedBlurb.velocity.x = newX - rect.left;
+        draggedBlurb.velocity.y = newY - rect.top;
+      }
+    }
+
+    function stopDragging() {
+      draggedBlurb = null;
+      document.removeEventListener('mousemove', dragBlurb);
+      document.removeEventListener('mouseup', stopDragging);
+    }
+
+    function updateBlurbPositions() {
+  const container = document.querySelector('.container');
+  const containerRect = container.getBoundingClientRect();
+
+  blurbElements.forEach(blurb => {
+    const rect = blurb.getBoundingClientRect();
+    const dx = rect.left + rect.width / 2 - windOrigin.x;
+    const dy = rect.top + rect.height / 2 - windOrigin.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const windAngle = Math.atan2(dy, dx);
+    const windX = windSpeed * Math.cos(windAngle);
+    const windY = windSpeed * Math.sin(windAngle);
+
+    let newX = rect.left + blurb.velocity.x + windX;
+    let newY = rect.top + blurb.velocity.y + windY;
+
+    // Check for collision with walls
+    if (newX <= 0) {
+      newX = 0;
+      blurb.velocity.x *= -1; // Reverse velocity for bounce
+    } else if (newX + rect.width >= containerRect.width) {
+      newX = containerRect.width - rect.width;
+      blurb.velocity.x *= -1; // Reverse velocity for bounce
+    }
+
+    if (newY <= 0) {
+      newY = 0;
+      blurb.velocity.y *= -1; // Reverse velocity for bounce
+    } else if (newY + rect.height >= containerRect.height - 150) {
+      newY = containerRect.height - rect.height - 150;
+      blurb.velocity.y *= -1; // Reverse velocity for bounce
+    }
+
+    blurb.style.left = newX + 'px';
+    blurb.style.top = newY + 'px';
+
+    blurb.velocity.x *= friction;
+    blurb.velocity.y *= friction;
+  });
+
+  checkBlurbCollisions();
+  requestAnimationFrame(updateBlurbPositions);
+}
+
+    function checkBlurbCollisions() {
+      for (let i = 0; i < blurbElements.length; i++) {
+        for (let j = i + 1; j < blurbElements.length; j++) {
+          const blurb1 = blurbElements[i];
+          const blurb2 = blurbElements[j];
+          const rect1 = blurb1.getBoundingClientRect();
+          const rect2 = blurb2.getBoundingClientRect();
+
+          if (
+            rect1.left < rect2.right &&
+            rect1.right > rect2.left &&
+            rect1.top < rect2.bottom &&
+            rect1.bottom > rect2.top
+          ) {
+            const dx = (rect1.left + rect1.width / 2) - (rect2.left + rect2.width / 2);
+            const dy = (rect1.top + rect1.height / 2) - (rect2.top + rect2.height / 2);
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const overlap = (rect1.width / 2 + rect2.width / 2) - distance;
+
+            if (overlap > 0) {
+              const angle = Math.atan2(dy, dx);
+              const sin = Math.sin(angle);
+              const cos = Math.cos(angle);
+
+              const v1 = {
+                x: blurb1.velocity.x * cos + blurb1.velocity.y * sin,
+                y: blurb1.velocity.y * cos - blurb1.velocity.x * sin,
+              };
+              const v2 = {
+                x: blurb2.velocity.x * cos + blurb2.velocity.y * sin,
+                y: blurb2.velocity.y * cos - blurb2.velocity.x * sin,
+              };
+
+              const vTotal = v1.x - v2.x;
+              v1.x = ((blurb1.mass - blurb2.mass) * v1.x + 2 * blurb2.mass * v2.x) / (blurb1.mass + blurb2.mass);
+              v2.x = vTotal + v1.x;
+
+              blurb1.velocity.x = v1.x * cos - v1.y * sin;
+              blurb1.velocity.y = v1.y * cos + v1.x * sin;
+              blurb2.velocity.x = v2.x * cos - v2.y * sin;
+              blurb2.velocity.y = v2.y * cos + v2.x * sin;
+
+              const overlapX = (rect1.width + rect2.width) / 2 - Math.abs(dx);
+              const overlapY = (rect1.height + rect2.height) / 2 - Math.abs(dy);
+
+              if (overlapX < overlapY) {
+                if (dx < 0) {
+                  blurb1.style.left = `${rect1.left - overlapX}px`;
+                  blurb2.style.left = `${rect2.left + overlapX}px`;
+                } else {
+                  blurb1.style.left = `${rect1.left + overlapX}px`;
+                  blurb2.style.left = `${rect2.left - overlapX}px`;
+                }
+              } else {
+                if (dy < 0) {
+                  blurb1.style.top = `${rect1.top - overlapY}px`;
+                  blurb2.style.top = `${rect2.top + overlapY}px`;
+                } else {
+                  blurb1.style.top = `${rect1.top + overlapY}px`;
+                  blurb2.style.top = `${rect2.top - overlapY}px`;
+                }
+              }
+
+              showExplosion(rect1.left + rect1.width / 2, rect1.top + rect1.height / 2);
+            }
+          }
+        }
+      }
+    }
+    function positionBlurbs() {
+      const container = document.querySelector('.container');
+      const containerRect = container.getBoundingClientRect();
+
+      blurbElements.forEach(blurb => {
+        let overlapping = true;
+        let attempts = 0;
+
+        while (overlapping && attempts < 100) {
+          const { x, y } = getRandomPosition();
+          blurb.style.left = x + 'px';
+          blurb.style.top = y + 'px';
+
+          overlapping = false;
+          const rect1 = blurb.getBoundingClientRect();
+
+          for (let i = 0; i < blurbElements.length; i++) {
+            if (blurbElements[i] !== blurb) {
+              const rect2 = blurbElements[i].getBoundingClientRect();
+
+              if (
+                rect1.left < rect2.right &&
+                rect1.right > rect2.left &&
+                rect1.top < rect2.bottom &&
+                rect1.bottom > rect2.top
+              ) {
+                overlapping = true;
+                break;
+              }
+            }
+          }
+
+          attempts++;
+        }
+      });
+    }
+    function showExplosion(x, y) {
+      const explosion = document.createElement('div');
+      explosion.classList.add('explosion');
+      explosion.style.left = x - 25 + 'px';
+      explosion.style.top = y - 25 + 'px';
+      document.body.appendChild(explosion);
+      setTimeout(() => {
+        explosion.style.opacity = '1';
+      }, 50);
+      setTimeout(() => {
+        explosion.style.opacity = '0';
+      }, 500);
+      setTimeout(() => {
+        document.body.removeChild(explosion);
+      }, 1000);
+    }
+
+    function handlePollSubmit(event) {
+      event.preventDefault();
+      const pollMessage = document.querySelector('.poll-message');
+      pollMessage.textContent = "Great! We emailed Raymond with your response.";
+    }
+
+    function updateWind() {
+      const container = document.querySelector('.container');
+      const containerRect = container.getBoundingClientRect();
+      windOrigin.x = Math.random() * containerRect.width;
+      windOrigin.y = Math.random() * containerRect.height;
+      windSpeed = (Math.random() - 0.5) * 0.5;
+      setTimeout(updateWind, 5000);
+    }
+
+    blurbs.forEach(blurb => {
+      const { x, y } = getRandomPosition();
+      createBlurb(blurb, x, y);
+    });
+
+    updateBlurbPositions();
+    updateBlurbPositions();
+    updateWind();
+
+    const pollForm = document.querySelector('.poll form');
+    pollForm.addEventListener('submit', handlePollSubmit);
+  </script>
+</body>
 </html>
